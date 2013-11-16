@@ -9,39 +9,22 @@
 /* Begin PBXBuildFile section */
 		5CB0D2F21837FC44006230DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB0D2F11837FC44006230DA /* CoreLocation.framework */; };
 		5CB0D2F418380437006230DA /* ReportCrisisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */; };
-		5CB0D2F518380437006230DA /* ReportCrisisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */; };
 		5CB0D2F918380B92006230DA /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F818380B92006230DA /* HTTPClient.m */; };
-		5CB0D2FA18380B92006230DA /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F818380B92006230DA /* HTTPClient.m */; };
 		5CB0D30F18381AE4006230DA /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D2FD18381AE4006230DA /* AFHTTPRequestOperation.m */; };
-		5CB0D31018381AE4006230DA /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D2FD18381AE4006230DA /* AFHTTPRequestOperation.m */; };
 		5CB0D31118381AE4006230DA /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D2FF18381AE4006230DA /* AFHTTPRequestOperationManager.m */; };
-		5CB0D31218381AE4006230DA /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D2FF18381AE4006230DA /* AFHTTPRequestOperationManager.m */; };
 		5CB0D31318381AE4006230DA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30118381AE4006230DA /* AFHTTPSessionManager.m */; };
-		5CB0D31418381AE4006230DA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30118381AE4006230DA /* AFHTTPSessionManager.m */; };
 		5CB0D31518381AE4006230DA /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30418381AE4006230DA /* AFNetworkReachabilityManager.m */; };
-		5CB0D31618381AE4006230DA /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30418381AE4006230DA /* AFNetworkReachabilityManager.m */; };
 		5CB0D31718381AE4006230DA /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30618381AE4006230DA /* AFSecurityPolicy.m */; };
-		5CB0D31818381AE4006230DA /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30618381AE4006230DA /* AFSecurityPolicy.m */; };
 		5CB0D31918381AE4006230DA /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30818381AE4006230DA /* AFURLConnectionOperation.m */; };
-		5CB0D31A18381AE4006230DA /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30818381AE4006230DA /* AFURLConnectionOperation.m */; };
 		5CB0D31B18381AE4006230DA /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30A18381AE4006230DA /* AFURLRequestSerialization.m */; };
-		5CB0D31C18381AE4006230DA /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30A18381AE4006230DA /* AFURLRequestSerialization.m */; };
 		5CB0D31D18381AE4006230DA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30C18381AE4006230DA /* AFURLResponseSerialization.m */; };
-		5CB0D31E18381AE4006230DA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30C18381AE4006230DA /* AFURLResponseSerialization.m */; };
 		5CB0D31F18381AE4006230DA /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30E18381AE4006230DA /* AFURLSessionManager.m */; };
-		5CB0D32018381AE4006230DA /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30E18381AE4006230DA /* AFURLSessionManager.m */; };
 		5CB0D3241838252F006230DA /* UpdateCrisisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D3221838252F006230DA /* UpdateCrisisViewController.m */; };
-		5CB0D3251838252F006230DA /* UpdateCrisisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D3221838252F006230DA /* UpdateCrisisViewController.m */; };
 		5CB0D3261838252F006230DA /* UpdateCrisisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D3231838252F006230DA /* UpdateCrisisViewController.xib */; };
-		5CB0D3271838252F006230DA /* UpdateCrisisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D3231838252F006230DA /* UpdateCrisisViewController.xib */; };
 		5CB0D32B18382F44006230DA /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D32918382F44006230DA /* UserInfoViewController.m */; };
-		5CB0D32C18382F44006230DA /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D32918382F44006230DA /* UserInfoViewController.m */; };
 		5CB0D32D18382F44006230DA /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D32A18382F44006230DA /* UserInfoViewController.xib */; };
-		5CB0D32E18382F44006230DA /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D32A18382F44006230DA /* UserInfoViewController.xib */; };
 		5CB0D332183830BE006230DA /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D330183830BE006230DA /* background@2x.jpg */; };
-		5CB0D333183830BE006230DA /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D330183830BE006230DA /* background@2x.jpg */; };
 		5CB0D334183830BE006230DA /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D331183830BE006230DA /* pin@2x.png */; };
-		5CB0D335183830BE006230DA /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D331183830BE006230DA /* pin@2x.png */; };
 		5CC5DD491837EE74009B768D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD481837EE74009B768D /* Foundation.framework */; };
 		5CC5DD4B1837EE74009B768D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD4A1837EE74009B768D /* CoreGraphics.framework */; };
 		5CC5DD4D1837EE74009B768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD4C1837EE74009B768D /* UIKit.framework */; };
@@ -49,25 +32,9 @@
 		5CC5DD551837EE74009B768D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD541837EE74009B768D /* main.m */; };
 		5CC5DD591837EE74009B768D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD581837EE74009B768D /* AppDelegate.m */; };
 		5CC5DD5B1837EE74009B768D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CC5DD5A1837EE74009B768D /* Images.xcassets */; };
-		5CC5DD621837EE75009B768D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD611837EE75009B768D /* XCTest.framework */; };
-		5CC5DD631837EE75009B768D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD481837EE74009B768D /* Foundation.framework */; };
-		5CC5DD641837EE75009B768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD4C1837EE74009B768D /* UIKit.framework */; };
-		5CC5DD6C1837EE75009B768D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CC5DD6A1837EE75009B768D /* InfoPlist.strings */; };
-		5CC5DD6E1837EE75009B768D /* StreetMomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD6D1837EE75009B768D /* StreetMomTests.m */; };
 		5CC5DD7A1837F0E4009B768D /* ReportCrisisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */; };
-		5CC5DD7B1837F0E4009B768D /* ReportCrisisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */; };
 		5CC5DD7D1837F12D009B768D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD7C1837F12D009B768D /* MapKit.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		5CC5DD651837EE75009B768D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5CC5DD3D1837EE74009B768D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5CC5DD441837EE74009B768D;
-			remoteInfo = StreetMom;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5CB0D2F11837FC44006230DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -112,11 +79,7 @@
 		5CC5DD571837EE74009B768D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5CC5DD581837EE74009B768D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5CC5DD5A1837EE74009B768D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5CC5DD601837EE75009B768D /* StreetMomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StreetMomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC5DD611837EE75009B768D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		5CC5DD691837EE75009B768D /* StreetMomTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StreetMomTests-Info.plist"; sourceTree = "<group>"; };
-		5CC5DD6B1837EE75009B768D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5CC5DD6D1837EE75009B768D /* StreetMomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreetMomTests.m; sourceTree = "<group>"; };
 		5CC5DD781837F0E4009B768D /* ReportCrisisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCrisisViewController.h; sourceTree = "<group>"; };
 		5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCrisisViewController.m; sourceTree = "<group>"; };
 		5CC5DD7C1837F12D009B768D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -132,16 +95,6 @@
 				5CC5DD4B1837EE74009B768D /* CoreGraphics.framework in Frameworks */,
 				5CC5DD4D1837EE74009B768D /* UIKit.framework in Frameworks */,
 				5CC5DD491837EE74009B768D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5CC5DD5D1837EE75009B768D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5CC5DD621837EE75009B768D /* XCTest.framework in Frameworks */,
-				5CC5DD641837EE75009B768D /* UIKit.framework in Frameworks */,
-				5CC5DD631837EE75009B768D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +153,6 @@
 				5CC5DD461837EE74009B768D /* Products */,
 				5CB0D32F183830BE006230DA /* Resources */,
 				5CC5DD4E1837EE74009B768D /* StreetMom */,
-				5CC5DD671837EE75009B768D /* StreetMomTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -208,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				5CC5DD451837EE74009B768D /* StreetMom.app */,
-				5CC5DD601837EE75009B768D /* StreetMomTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,24 +201,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5CC5DD671837EE75009B768D /* StreetMomTests */ = {
-			isa = PBXGroup;
-			children = (
-				5CC5DD6D1837EE75009B768D /* StreetMomTests.m */,
-				5CC5DD681837EE75009B768D /* Supporting Files */,
-			);
-			path = StreetMomTests;
-			sourceTree = "<group>";
-		};
-		5CC5DD681837EE75009B768D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5CC5DD691837EE75009B768D /* StreetMomTests-Info.plist */,
-				5CC5DD6A1837EE75009B768D /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		5CC5DD771837F094009B768D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,24 +237,6 @@
 			productReference = 5CC5DD451837EE74009B768D /* StreetMom.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5CC5DD5F1837EE75009B768D /* StreetMomTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5CC5DD741837EE75009B768D /* Build configuration list for PBXNativeTarget "StreetMomTests" */;
-			buildPhases = (
-				5CC5DD5C1837EE75009B768D /* Sources */,
-				5CC5DD5D1837EE75009B768D /* Frameworks */,
-				5CC5DD5E1837EE75009B768D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5CC5DD661837EE75009B768D /* PBXTargetDependency */,
-			);
-			name = StreetMomTests;
-			productName = StreetMomTests;
-			productReference = 5CC5DD601837EE75009B768D /* StreetMomTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -330,11 +245,6 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = quavmo;
-				TargetAttributes = {
-					5CC5DD5F1837EE75009B768D = {
-						TestTargetID = 5CC5DD441837EE74009B768D;
-					};
-				};
 			};
 			buildConfigurationList = 5CC5DD401837EE74009B768D /* Build configuration list for PBXProject "StreetMom" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -349,7 +259,6 @@
 			projectRoot = "";
 			targets = (
 				5CC5DD441837EE74009B768D /* StreetMom */,
-				5CC5DD5F1837EE75009B768D /* StreetMomTests */,
 			);
 		};
 /* End PBXProject section */
@@ -366,19 +275,6 @@
 				5CC5DD531837EE74009B768D /* InfoPlist.strings in Resources */,
 				5CB0D332183830BE006230DA /* background@2x.jpg in Resources */,
 				5CC5DD5B1837EE74009B768D /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5CC5DD5E1837EE75009B768D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5CB0D2F518380437006230DA /* ReportCrisisViewController.xib in Resources */,
-				5CB0D32E18382F44006230DA /* UserInfoViewController.xib in Resources */,
-				5CB0D335183830BE006230DA /* pin@2x.png in Resources */,
-				5CB0D3271838252F006230DA /* UpdateCrisisViewController.xib in Resources */,
-				5CB0D333183830BE006230DA /* background@2x.jpg in Resources */,
-				5CC5DD6C1837EE75009B768D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,50 +303,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5CC5DD5C1837EE75009B768D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5CB0D31018381AE4006230DA /* AFHTTPRequestOperation.m in Sources */,
-				5CC5DD7B1837F0E4009B768D /* ReportCrisisViewController.m in Sources */,
-				5CB0D31218381AE4006230DA /* AFHTTPRequestOperationManager.m in Sources */,
-				5CB0D31618381AE4006230DA /* AFNetworkReachabilityManager.m in Sources */,
-				5CB0D3251838252F006230DA /* UpdateCrisisViewController.m in Sources */,
-				5CB0D32C18382F44006230DA /* UserInfoViewController.m in Sources */,
-				5CB0D31E18381AE4006230DA /* AFURLResponseSerialization.m in Sources */,
-				5CB0D31A18381AE4006230DA /* AFURLConnectionOperation.m in Sources */,
-				5CB0D31818381AE4006230DA /* AFSecurityPolicy.m in Sources */,
-				5CB0D31418381AE4006230DA /* AFHTTPSessionManager.m in Sources */,
-				5CB0D31C18381AE4006230DA /* AFURLRequestSerialization.m in Sources */,
-				5CB0D32018381AE4006230DA /* AFURLSessionManager.m in Sources */,
-				5CC5DD6E1837EE75009B768D /* StreetMomTests.m in Sources */,
-				5CB0D2FA18380B92006230DA /* HTTPClient.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5CC5DD661837EE75009B768D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5CC5DD441837EE74009B768D /* StreetMom */;
-			targetProxy = 5CC5DD651837EE75009B768D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5CC5DD511837EE74009B768D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5CC5DD521837EE74009B768D /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5CC5DD6A1837EE75009B768D /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5CC5DD6B1837EE75009B768D /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -556,48 +415,6 @@
 			};
 			name = Release;
 		};
-		5CC5DD751837EE75009B768D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StreetMom.app/StreetMom";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StreetMom/StreetMom-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "StreetMomTests/StreetMomTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		5CC5DD761837EE75009B768D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StreetMom.app/StreetMom";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StreetMom/StreetMom-Prefix.pch";
-				INFOPLIST_FILE = "StreetMomTests/StreetMomTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -615,15 +432,6 @@
 			buildConfigurations = (
 				5CC5DD721837EE75009B768D /* Debug */,
 				5CC5DD731837EE75009B768D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5CC5DD741837EE75009B768D /* Build configuration list for PBXNativeTarget "StreetMomTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5CC5DD751837EE75009B768D /* Debug */,
-				5CC5DD761837EE75009B768D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
