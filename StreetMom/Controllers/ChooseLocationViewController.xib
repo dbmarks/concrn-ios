@@ -8,6 +8,7 @@
             <connections>
                 <outlet property="mapView" destination="qMQ-o2-Q0M" id="AXV-Gt-isP"/>
                 <outlet property="reportCrisisButton" destination="njU-0w-1Wc" id="B73-kD-M3l"/>
+                <outlet property="spinner" destination="2fl-rQ-r8C" id="oJe-Ak-Cfg"/>
                 <outlet property="view" destination="1" id="1iY-9H-1ux"/>
             </connections>
         </placeholder>
@@ -33,10 +34,17 @@
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="didTapReportCrisisButton:" destination="-1" eventType="touchUpInside" id="fz4-yz-14O"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.84313725490000002" green="0.84313725490000002" blue="0.84313725490000002" alpha="1" colorSpace="deviceRGB"/>
                 </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="2fl-rQ-r8C">
+                    <rect key="frame" x="151" y="225" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
