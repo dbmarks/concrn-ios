@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5CB0D2F21837FC44006230DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB0D2F11837FC44006230DA /* CoreLocation.framework */; };
-		5CB0D2F418380437006230DA /* ChooseLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F318380437006230DA /* ChooseLocationViewController.xib */; };
-		5CB0D2F518380437006230DA /* ChooseLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F318380437006230DA /* ChooseLocationViewController.xib */; };
+		5CB0D2F418380437006230DA /* ReportCrisisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */; };
+		5CB0D2F518380437006230DA /* ReportCrisisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */; };
 		5CB0D2F918380B92006230DA /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F818380B92006230DA /* HTTPClient.m */; };
 		5CB0D2FA18380B92006230DA /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F818380B92006230DA /* HTTPClient.m */; };
 		5CB0D30F18381AE4006230DA /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D2FD18381AE4006230DA /* AFHTTPRequestOperation.m */; };
@@ -30,6 +30,10 @@
 		5CB0D31E18381AE4006230DA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30C18381AE4006230DA /* AFURLResponseSerialization.m */; };
 		5CB0D31F18381AE4006230DA /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30E18381AE4006230DA /* AFURLSessionManager.m */; };
 		5CB0D32018381AE4006230DA /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30E18381AE4006230DA /* AFURLSessionManager.m */; };
+		5CB0D3241838252F006230DA /* UpdateCrisisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D3221838252F006230DA /* UpdateCrisisViewController.m */; };
+		5CB0D3251838252F006230DA /* UpdateCrisisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D3221838252F006230DA /* UpdateCrisisViewController.m */; };
+		5CB0D3261838252F006230DA /* UpdateCrisisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D3231838252F006230DA /* UpdateCrisisViewController.xib */; };
+		5CB0D3271838252F006230DA /* UpdateCrisisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D3231838252F006230DA /* UpdateCrisisViewController.xib */; };
 		5CC5DD491837EE74009B768D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD481837EE74009B768D /* Foundation.framework */; };
 		5CC5DD4B1837EE74009B768D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD4A1837EE74009B768D /* CoreGraphics.framework */; };
 		5CC5DD4D1837EE74009B768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD4C1837EE74009B768D /* UIKit.framework */; };
@@ -42,8 +46,8 @@
 		5CC5DD641837EE75009B768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD4C1837EE74009B768D /* UIKit.framework */; };
 		5CC5DD6C1837EE75009B768D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CC5DD6A1837EE75009B768D /* InfoPlist.strings */; };
 		5CC5DD6E1837EE75009B768D /* StreetMomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD6D1837EE75009B768D /* StreetMomTests.m */; };
-		5CC5DD7A1837F0E4009B768D /* ChooseLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD791837F0E4009B768D /* ChooseLocationViewController.m */; };
-		5CC5DD7B1837F0E4009B768D /* ChooseLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD791837F0E4009B768D /* ChooseLocationViewController.m */; };
+		5CC5DD7A1837F0E4009B768D /* ReportCrisisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */; };
+		5CC5DD7B1837F0E4009B768D /* ReportCrisisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */; };
 		5CC5DD7D1837F12D009B768D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD7C1837F12D009B768D /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +63,7 @@
 
 /* Begin PBXFileReference section */
 		5CB0D2F11837FC44006230DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		5CB0D2F318380437006230DA /* ChooseLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseLocationViewController.xib; sourceTree = "<group>"; };
+		5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportCrisisViewController.xib; sourceTree = "<group>"; };
 		5CB0D2F718380B92006230DA /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
 		5CB0D2F818380B92006230DA /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
 		5CB0D2FC18381AE4006230DA /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -81,6 +85,9 @@
 		5CB0D30C18381AE4006230DA /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		5CB0D30D18381AE4006230DA /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		5CB0D30E18381AE4006230DA /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		5CB0D3211838252F006230DA /* UpdateCrisisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateCrisisViewController.h; sourceTree = "<group>"; };
+		5CB0D3221838252F006230DA /* UpdateCrisisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateCrisisViewController.m; sourceTree = "<group>"; };
+		5CB0D3231838252F006230DA /* UpdateCrisisViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateCrisisViewController.xib; sourceTree = "<group>"; };
 		5CC5DD451837EE74009B768D /* StreetMom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreetMom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC5DD481837EE74009B768D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5CC5DD4A1837EE74009B768D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -97,8 +104,8 @@
 		5CC5DD691837EE75009B768D /* StreetMomTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StreetMomTests-Info.plist"; sourceTree = "<group>"; };
 		5CC5DD6B1837EE75009B768D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5CC5DD6D1837EE75009B768D /* StreetMomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreetMomTests.m; sourceTree = "<group>"; };
-		5CC5DD781837F0E4009B768D /* ChooseLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseLocationViewController.h; sourceTree = "<group>"; };
-		5CC5DD791837F0E4009B768D /* ChooseLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseLocationViewController.m; sourceTree = "<group>"; };
+		5CC5DD781837F0E4009B768D /* ReportCrisisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCrisisViewController.h; sourceTree = "<group>"; };
+		5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCrisisViewController.m; sourceTree = "<group>"; };
 		5CC5DD7C1837F12D009B768D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -241,9 +248,12 @@
 		5CC5DD771837F094009B768D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5CC5DD781837F0E4009B768D /* ChooseLocationViewController.h */,
-				5CC5DD791837F0E4009B768D /* ChooseLocationViewController.m */,
-				5CB0D2F318380437006230DA /* ChooseLocationViewController.xib */,
+				5CC5DD781837F0E4009B768D /* ReportCrisisViewController.h */,
+				5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */,
+				5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */,
+				5CB0D3211838252F006230DA /* UpdateCrisisViewController.h */,
+				5CB0D3221838252F006230DA /* UpdateCrisisViewController.m */,
+				5CB0D3231838252F006230DA /* UpdateCrisisViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -323,7 +333,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CB0D2F418380437006230DA /* ChooseLocationViewController.xib in Resources */,
+				5CB0D2F418380437006230DA /* ReportCrisisViewController.xib in Resources */,
+				5CB0D3261838252F006230DA /* UpdateCrisisViewController.xib in Resources */,
 				5CC5DD531837EE74009B768D /* InfoPlist.strings in Resources */,
 				5CC5DD5B1837EE74009B768D /* Images.xcassets in Resources */,
 			);
@@ -333,7 +344,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CB0D2F518380437006230DA /* ChooseLocationViewController.xib in Resources */,
+				5CB0D2F518380437006230DA /* ReportCrisisViewController.xib in Resources */,
+				5CB0D3271838252F006230DA /* UpdateCrisisViewController.xib in Resources */,
 				5CC5DD6C1837EE75009B768D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +359,8 @@
 			files = (
 				5CC5DD591837EE74009B768D /* AppDelegate.m in Sources */,
 				5CB0D31718381AE4006230DA /* AFSecurityPolicy.m in Sources */,
-				5CC5DD7A1837F0E4009B768D /* ChooseLocationViewController.m in Sources */,
+				5CC5DD7A1837F0E4009B768D /* ReportCrisisViewController.m in Sources */,
+				5CB0D3241838252F006230DA /* UpdateCrisisViewController.m in Sources */,
 				5CB0D31118381AE4006230DA /* AFHTTPRequestOperationManager.m in Sources */,
 				5CB0D31918381AE4006230DA /* AFURLConnectionOperation.m in Sources */,
 				5CB0D30F18381AE4006230DA /* AFHTTPRequestOperation.m in Sources */,
@@ -366,9 +379,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CB0D31018381AE4006230DA /* AFHTTPRequestOperation.m in Sources */,
-				5CC5DD7B1837F0E4009B768D /* ChooseLocationViewController.m in Sources */,
+				5CC5DD7B1837F0E4009B768D /* ReportCrisisViewController.m in Sources */,
 				5CB0D31218381AE4006230DA /* AFHTTPRequestOperationManager.m in Sources */,
 				5CB0D31618381AE4006230DA /* AFNetworkReachabilityManager.m in Sources */,
+				5CB0D3251838252F006230DA /* UpdateCrisisViewController.m in Sources */,
 				5CB0D31E18381AE4006230DA /* AFURLResponseSerialization.m in Sources */,
 				5CB0D31A18381AE4006230DA /* AFURLConnectionOperation.m in Sources */,
 				5CB0D31818381AE4006230DA /* AFSecurityPolicy.m in Sources */,

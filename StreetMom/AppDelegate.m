@@ -1,5 +1,5 @@
 #import "AppDelegate.h"
-#import "ChooseLocationViewController.h"
+#import "ReportCrisisViewController.h"
 #import "HTTPClient.h"
 
 @implementation AppDelegate
@@ -8,8 +8,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     HTTPClient *httpClient = [[HTTPClient alloc] init];
-    UIViewController *chooseLocationViewController = [[ChooseLocationViewController alloc] initWithHTTPClient:httpClient];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:chooseLocationViewController];
+    UIViewController *reportCrisisViewController = [[ReportCrisisViewController alloc] initWithHTTPClient:httpClient];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:reportCrisisViewController];
     self.window.rootViewController = navigationController;
 
     [self.window makeKeyAndVisible];

@@ -1,14 +1,15 @@
-#import "ChooseLocationViewController.h"
-#import "HTTPClient.h"
 #import <MapKit/MapKit.h>
+#import "ReportCrisisViewController.h"
+#import "HTTPClient.h"
+#import "UpdateCrisisViewController.h"
 
-@interface ChooseLocationViewController ()
+@interface ReportCrisisViewController ()
 @property (nonatomic) CLLocationManager *locationManager;
 @property (nonatomic) UIBarButtonItem *nineOneOneButton;
 @property (nonatomic) HTTPClient *httpClient;
 @end
 
-@implementation ChooseLocationViewController
+@implementation ReportCrisisViewController
 
 - (instancetype)initWithHTTPClient:(HTTPClient *)httpClient {
     self = [super initWithNibName:nil bundle:nil];
@@ -64,6 +65,12 @@
                                 onSuccess:^(NSDictionary *reportJSON) {
                                     self.reportCrisisButton.enabled = YES;
                                     [self.spinner stopAnimating];
+
+                                    NSInteger reportID = [reportJSON[@"id"] integerValue];
+                                    UpdateCrisisViewController *updateCrisisVC = [[UpdateCrisisViewController alloc] initWithReportID:reportID];
+                                    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:updateCrisisVC];
+                                    [self presentViewController:navController animated:YES completion:nil];
+
                                 } failure:^(NSError *error) {
                                     self.reportCrisisButton.enabled = YES;
                                     [self.spinner stopAnimating];
