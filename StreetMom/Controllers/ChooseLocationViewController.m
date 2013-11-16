@@ -1,9 +1,8 @@
 #import "ChooseLocationViewController.h"
-#import <MapKit/MapKit.h>
 
 @interface ChooseLocationViewController ()
-@property (nonatomic) MKMapView *mapView;
 @property (nonatomic) CLLocationManager *locationManager;
+@property (nonatomic) UIBarButtonItem *nineOneOneButton;
 @end
 
 @implementation ChooseLocationViewController
@@ -11,21 +10,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.navigationItem.title = @"Street Mom";
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
 
-    self.mapView = [[MKMapView alloc] init];
-    self.mapView.showsUserLocation = YES;
     self.mapView.showsPointsOfInterest = NO;
-    [self.view addSubview:self.mapView];
+
+    self.nineOneOneButton = [[UIBarButtonItem alloc] initWithTitle:@"Call 911"
+                                                             style:UIBarButtonItemStyleDone
+                                                            target:self
+                                                            action:@selector(didTapCall911:)];
+    self.navigationItem.rightBarButtonItem = self.nineOneOneButton;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
     [self.locationManager startUpdatingLocation];
-
-    self.mapView.frame = self.view.bounds;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -34,12 +37,19 @@
     [self.locationManager stopUpdatingLocation];
 }
 
+#pragma mark - Actions
+
+- (void)didTapCall911:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://911"]];
+}
+
 #pragma mark - <CLLocationManagerDelegate>
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     MKCoordinateSpan span = MKCoordinateSpanMake(.01, .01);
     MKCoordinateRegion region = MKCoordinateRegionMake(manager.location.coordinate, span);
     [self.mapView setRegion:region animated:YES];
+    [self.locationManager stopUpdatingLocation];
 }
 
 @end

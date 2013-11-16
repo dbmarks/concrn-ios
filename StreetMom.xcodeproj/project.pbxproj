@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5CB0D2F21837FC44006230DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB0D2F11837FC44006230DA /* CoreLocation.framework */; };
+		5CB0D2F418380437006230DA /* ChooseLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F318380437006230DA /* ChooseLocationViewController.xib */; };
+		5CB0D2F518380437006230DA /* ChooseLocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F318380437006230DA /* ChooseLocationViewController.xib */; };
 		5CC5DD491837EE74009B768D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD481837EE74009B768D /* Foundation.framework */; };
 		5CC5DD4B1837EE74009B768D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD4A1837EE74009B768D /* CoreGraphics.framework */; };
 		5CC5DD4D1837EE74009B768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD4C1837EE74009B768D /* UIKit.framework */; };
@@ -37,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		5CB0D2F11837FC44006230DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5CB0D2F318380437006230DA /* ChooseLocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseLocationViewController.xib; sourceTree = "<group>"; };
 		5CC5DD451837EE74009B768D /* StreetMom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreetMom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC5DD481837EE74009B768D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5CC5DD4A1837EE74009B768D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -162,6 +165,7 @@
 			children = (
 				5CC5DD781837F0E4009B768D /* ChooseLocationViewController.h */,
 				5CC5DD791837F0E4009B768D /* ChooseLocationViewController.m */,
+				5CB0D2F318380437006230DA /* ChooseLocationViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -241,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB0D2F418380437006230DA /* ChooseLocationViewController.xib in Resources */,
 				5CC5DD531837EE74009B768D /* InfoPlist.strings in Resources */,
 				5CC5DD5B1837EE74009B768D /* Images.xcassets in Resources */,
 			);
@@ -250,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB0D2F518380437006230DA /* ChooseLocationViewController.xib in Resources */,
 				5CC5DD6C1837EE75009B768D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
