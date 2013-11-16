@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5CB0D2F21837FC44006230DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB0D2F11837FC44006230DA /* CoreLocation.framework */; };
 		5CC5DD491837EE74009B768D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD481837EE74009B768D /* Foundation.framework */; };
 		5CC5DD4B1837EE74009B768D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD4A1837EE74009B768D /* CoreGraphics.framework */; };
 		5CC5DD4D1837EE74009B768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD4C1837EE74009B768D /* UIKit.framework */; };
@@ -19,6 +20,9 @@
 		5CC5DD641837EE75009B768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD4C1837EE74009B768D /* UIKit.framework */; };
 		5CC5DD6C1837EE75009B768D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CC5DD6A1837EE75009B768D /* InfoPlist.strings */; };
 		5CC5DD6E1837EE75009B768D /* StreetMomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD6D1837EE75009B768D /* StreetMomTests.m */; };
+		5CC5DD7A1837F0E4009B768D /* ChooseLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD791837F0E4009B768D /* ChooseLocationViewController.m */; };
+		5CC5DD7B1837F0E4009B768D /* ChooseLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD791837F0E4009B768D /* ChooseLocationViewController.m */; };
+		5CC5DD7D1837F12D009B768D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD7C1837F12D009B768D /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5CB0D2F11837FC44006230DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5CC5DD451837EE74009B768D /* StreetMom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreetMom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC5DD481837EE74009B768D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5CC5DD4A1837EE74009B768D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +53,9 @@
 		5CC5DD691837EE75009B768D /* StreetMomTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StreetMomTests-Info.plist"; sourceTree = "<group>"; };
 		5CC5DD6B1837EE75009B768D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5CC5DD6D1837EE75009B768D /* StreetMomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StreetMomTests.m; sourceTree = "<group>"; };
+		5CC5DD781837F0E4009B768D /* ChooseLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseLocationViewController.h; sourceTree = "<group>"; };
+		5CC5DD791837F0E4009B768D /* ChooseLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseLocationViewController.m; sourceTree = "<group>"; };
+		5CC5DD7C1837F12D009B768D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB0D2F21837FC44006230DA /* CoreLocation.framework in Frameworks */,
+				5CC5DD7D1837F12D009B768D /* MapKit.framework in Frameworks */,
 				5CC5DD4B1837EE74009B768D /* CoreGraphics.framework in Frameworks */,
 				5CC5DD4D1837EE74009B768D /* UIKit.framework in Frameworks */,
 				5CC5DD491837EE74009B768D /* Foundation.framework in Frameworks */,
@@ -96,6 +106,8 @@
 		5CC5DD471837EE74009B768D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5CB0D2F11837FC44006230DA /* CoreLocation.framework */,
+				5CC5DD7C1837F12D009B768D /* MapKit.framework */,
 				5CC5DD481837EE74009B768D /* Foundation.framework */,
 				5CC5DD4A1837EE74009B768D /* CoreGraphics.framework */,
 				5CC5DD4C1837EE74009B768D /* UIKit.framework */,
@@ -109,6 +121,7 @@
 			children = (
 				5CC5DD571837EE74009B768D /* AppDelegate.h */,
 				5CC5DD581837EE74009B768D /* AppDelegate.m */,
+				5CC5DD771837F094009B768D /* Controllers */,
 				5CC5DD5A1837EE74009B768D /* Images.xcassets */,
 				5CC5DD4F1837EE74009B768D /* Supporting Files */,
 			);
@@ -142,6 +155,15 @@
 				5CC5DD6A1837EE75009B768D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5CC5DD771837F094009B768D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5CC5DD781837F0E4009B768D /* ChooseLocationViewController.h */,
+				5CC5DD791837F0E4009B768D /* ChooseLocationViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CC5DD591837EE74009B768D /* AppDelegate.m in Sources */,
+				5CC5DD7A1837F0E4009B768D /* ChooseLocationViewController.m in Sources */,
 				5CC5DD551837EE74009B768D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CC5DD7B1837F0E4009B768D /* ChooseLocationViewController.m in Sources */,
 				5CC5DD6E1837EE75009B768D /* StreetMomTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +465,7 @@
 				5CC5DD731837EE75009B768D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5CC5DD741837EE75009B768D /* Build configuration list for PBXNativeTarget "StreetMomTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +474,7 @@
 				5CC5DD761837EE75009B768D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
