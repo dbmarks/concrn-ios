@@ -34,6 +34,14 @@
 		5CB0D3251838252F006230DA /* UpdateCrisisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D3221838252F006230DA /* UpdateCrisisViewController.m */; };
 		5CB0D3261838252F006230DA /* UpdateCrisisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D3231838252F006230DA /* UpdateCrisisViewController.xib */; };
 		5CB0D3271838252F006230DA /* UpdateCrisisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D3231838252F006230DA /* UpdateCrisisViewController.xib */; };
+		5CB0D32B18382F44006230DA /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D32918382F44006230DA /* UserInfoViewController.m */; };
+		5CB0D32C18382F44006230DA /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D32918382F44006230DA /* UserInfoViewController.m */; };
+		5CB0D32D18382F44006230DA /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D32A18382F44006230DA /* UserInfoViewController.xib */; };
+		5CB0D32E18382F44006230DA /* UserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D32A18382F44006230DA /* UserInfoViewController.xib */; };
+		5CB0D332183830BE006230DA /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D330183830BE006230DA /* background@2x.jpg */; };
+		5CB0D333183830BE006230DA /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D330183830BE006230DA /* background@2x.jpg */; };
+		5CB0D334183830BE006230DA /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D331183830BE006230DA /* pin@2x.png */; };
+		5CB0D335183830BE006230DA /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D331183830BE006230DA /* pin@2x.png */; };
 		5CC5DD491837EE74009B768D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD481837EE74009B768D /* Foundation.framework */; };
 		5CC5DD4B1837EE74009B768D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD4A1837EE74009B768D /* CoreGraphics.framework */; };
 		5CC5DD4D1837EE74009B768D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD4C1837EE74009B768D /* UIKit.framework */; };
@@ -88,6 +96,11 @@
 		5CB0D3211838252F006230DA /* UpdateCrisisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateCrisisViewController.h; sourceTree = "<group>"; };
 		5CB0D3221838252F006230DA /* UpdateCrisisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateCrisisViewController.m; sourceTree = "<group>"; };
 		5CB0D3231838252F006230DA /* UpdateCrisisViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateCrisisViewController.xib; sourceTree = "<group>"; };
+		5CB0D32818382F44006230DA /* UserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoViewController.h; sourceTree = "<group>"; };
+		5CB0D32918382F44006230DA /* UserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoViewController.m; sourceTree = "<group>"; };
+		5CB0D32A18382F44006230DA /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
+		5CB0D330183830BE006230DA /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
+		5CB0D331183830BE006230DA /* pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin@2x.png"; sourceTree = "<group>"; };
 		5CC5DD451837EE74009B768D /* StreetMom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreetMom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC5DD481837EE74009B768D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5CC5DD4A1837EE74009B768D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -171,13 +184,23 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		5CB0D32F183830BE006230DA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5CB0D330183830BE006230DA /* background@2x.jpg */,
+				5CB0D331183830BE006230DA /* pin@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		5CC5DD3C1837EE74009B768D = {
 			isa = PBXGroup;
 			children = (
-				5CC5DD4E1837EE74009B768D /* StreetMom */,
-				5CC5DD671837EE75009B768D /* StreetMomTests */,
 				5CC5DD471837EE74009B768D /* Frameworks */,
 				5CC5DD461837EE74009B768D /* Products */,
+				5CB0D32F183830BE006230DA /* Resources */,
+				5CC5DD4E1837EE74009B768D /* StreetMom */,
+				5CC5DD671837EE75009B768D /* StreetMomTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,10 +216,10 @@
 		5CC5DD471837EE74009B768D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5CB0D2F11837FC44006230DA /* CoreLocation.framework */,
-				5CC5DD7C1837F12D009B768D /* MapKit.framework */,
-				5CC5DD481837EE74009B768D /* Foundation.framework */,
 				5CC5DD4A1837EE74009B768D /* CoreGraphics.framework */,
+				5CB0D2F11837FC44006230DA /* CoreLocation.framework */,
+				5CC5DD481837EE74009B768D /* Foundation.framework */,
+				5CC5DD7C1837F12D009B768D /* MapKit.framework */,
 				5CC5DD4C1837EE74009B768D /* UIKit.framework */,
 				5CC5DD611837EE75009B768D /* XCTest.framework */,
 			);
@@ -254,6 +277,9 @@
 				5CB0D3211838252F006230DA /* UpdateCrisisViewController.h */,
 				5CB0D3221838252F006230DA /* UpdateCrisisViewController.m */,
 				5CB0D3231838252F006230DA /* UpdateCrisisViewController.xib */,
+				5CB0D32818382F44006230DA /* UserInfoViewController.h */,
+				5CB0D32918382F44006230DA /* UserInfoViewController.m */,
+				5CB0D32A18382F44006230DA /* UserInfoViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -333,9 +359,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CB0D334183830BE006230DA /* pin@2x.png in Resources */,
 				5CB0D2F418380437006230DA /* ReportCrisisViewController.xib in Resources */,
 				5CB0D3261838252F006230DA /* UpdateCrisisViewController.xib in Resources */,
+				5CB0D32D18382F44006230DA /* UserInfoViewController.xib in Resources */,
 				5CC5DD531837EE74009B768D /* InfoPlist.strings in Resources */,
+				5CB0D332183830BE006230DA /* background@2x.jpg in Resources */,
 				5CC5DD5B1837EE74009B768D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +374,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CB0D2F518380437006230DA /* ReportCrisisViewController.xib in Resources */,
+				5CB0D32E18382F44006230DA /* UserInfoViewController.xib in Resources */,
+				5CB0D335183830BE006230DA /* pin@2x.png in Resources */,
 				5CB0D3271838252F006230DA /* UpdateCrisisViewController.xib in Resources */,
+				5CB0D333183830BE006230DA /* background@2x.jpg in Resources */,
 				5CC5DD6C1837EE75009B768D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +394,7 @@
 				5CC5DD7A1837F0E4009B768D /* ReportCrisisViewController.m in Sources */,
 				5CB0D3241838252F006230DA /* UpdateCrisisViewController.m in Sources */,
 				5CB0D31118381AE4006230DA /* AFHTTPRequestOperationManager.m in Sources */,
+				5CB0D32B18382F44006230DA /* UserInfoViewController.m in Sources */,
 				5CB0D31918381AE4006230DA /* AFURLConnectionOperation.m in Sources */,
 				5CB0D30F18381AE4006230DA /* AFHTTPRequestOperation.m in Sources */,
 				5CB0D2F918380B92006230DA /* HTTPClient.m in Sources */,
@@ -383,6 +416,7 @@
 				5CB0D31218381AE4006230DA /* AFHTTPRequestOperationManager.m in Sources */,
 				5CB0D31618381AE4006230DA /* AFNetworkReachabilityManager.m in Sources */,
 				5CB0D3251838252F006230DA /* UpdateCrisisViewController.m in Sources */,
+				5CB0D32C18382F44006230DA /* UserInfoViewController.m in Sources */,
 				5CB0D31E18381AE4006230DA /* AFURLResponseSerialization.m in Sources */,
 				5CB0D31A18381AE4006230DA /* AFURLConnectionOperation.m in Sources */,
 				5CB0D31818381AE4006230DA /* AFSecurityPolicy.m in Sources */,

@@ -2,6 +2,7 @@
 #import "ReportCrisisViewController.h"
 #import "HTTPClient.h"
 #import "UpdateCrisisViewController.h"
+#import "UserInfoViewController.h"
 
 @interface ReportCrisisViewController ()
 @property (nonatomic) CLLocationManager *locationManager;
@@ -40,6 +41,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
+    if ([[NSUserDefaults standardUserDefaults] valueForKey:UserEnteredUserInfoKey] == nil) {
+        UserInfoViewController *userInfoViewController = [[UserInfoViewController alloc] init];
+        [self presentViewController:userInfoViewController animated:NO completion:nil];
+    }
+
     [self.locationManager startUpdatingLocation];
 }
 
@@ -59,8 +65,11 @@
     self.reportCrisisButton.enabled = NO;
     [self.spinner startAnimating];
 
-    [self.httpClient reportCrisisWithName:@"Eugenia"
-                              phoneNumber:@"6102833553"
+    NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:UserNameKey];
+    NSString *phoneNumber = [[NSUserDefaults standardUserDefaults] valueForKey:UserPhoneNumberKey];
+
+    [self.httpClient reportCrisisWithName:name
+                              phoneNumber:phoneNumber
                                  location:self.locationManager.location
                                 onSuccess:^(NSDictionary *reportJSON) {
                                     self.reportCrisisButton.enabled = YES;
