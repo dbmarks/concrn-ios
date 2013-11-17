@@ -1,20 +1,31 @@
 #import "UpdateCrisisViewController.h"
 #import <QuickDialog/QuickDialog.h>
+#import "HTTPClient.h"
 
 @interface UpdateCrisisViewController ()
 
 @property (nonatomic, assign) NSInteger reportID;
+@property (nonatomic) HTTPClient *httpClient;
 @property (nonatomic) NSArray *cellTitles;
 @property (nonatomic) QuickDialogController *quickDialogController;
+@property (nonatomic) QRootElement *rootElement;
+@property (nonatomic) QSelectSection *observationSection;
+@property (nonatomic) NSArray *genderValues;
+@property (nonatomic) NSArray *ageValues;
+@property (nonatomic) NSArray *raceValues;
+@property (nonatomic) NSArray *settingValues;
+@property (nonatomic) NSArray *observationValues;
 
 @end
 
 @implementation UpdateCrisisViewController
 
-- (instancetype)initWithReportID:(NSInteger)reportID {
+- (instancetype)initWithReportID:(NSInteger)reportID
+                      httpClient:(HTTPClient *)httpClient {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         self.reportID = reportID;
+        self.httpClient = httpClient;
     }
     return self;
 }
@@ -25,56 +36,62 @@
     self.navigationItem.title = @"Street Mom";
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
 
-    QRootElement *rootElement = [[QRootElement alloc] init];
+    self.genderValues = @[@"Male", @"Female", @"Other"];
+    self.ageValues = @[@"Youth (0-17)", @"Young Adult (18-34)", @"Adult (35-64)", @"Senior (65+)"];
+    self.raceValues = @[@"Hispanic or Latino",
+                        @"American Indian or Alaska Native",
+                        @"Asian",
+                        @"Black or African America",
+                        @"Native Hawaiian or Pacific Islander",
+                        @"White",
+                        @"Other/Unknown"];
+    self.settingValues = @[@"Homeless", @"Workplace", @"School", @"Home", @"Other"];
+    self.observationValues = @[@"At risk of harm", @"Under the influence", @"Anxious", @"Depressed", @"Aggravated", @"Threatening"];
+
+    self.rootElement = [[QRootElement alloc] init];
+
+    QSection *patientDescriptionSection = [[QSection alloc] initWithTitle:@"Patient Description"];
 
     QRadioElement *genderElement = [[QRadioElement alloc] initWithKey:@"gender"];
     genderElement.selected = -1;
     genderElement.title = @"Gender";
-    genderElement.items = @[@"Male", @"Female", @"Other"];
+    genderElement.items = self.genderValues;
 
-    QRadioElement *ageElement = [[QRadioElement alloc] initWithKey:@"ageGroup"];
+    QRadioElement *ageElement = [[QRadioElement alloc] initWithKey:@"age"];
     ageElement.selected = -1;
-    ageElement.title = @"Age Groups";
-    ageElement.items = @[@"Youth (0-17)", @"Young Adult (18-34)", @"Adult (35-64)", @"Senior (65+)"];
+    ageElement.title = @"Age Group";
+    ageElement.items = self.ageValues;
 
     QRadioElement *raceElement = [[QRadioElement alloc] initWithKey:@"race"];
     raceElement.selected = -1;
     raceElement.title = @"Race/Ethniticy";
-    raceElement.items = @[@"Hispanic or Latino",
-                          @"American Indian or Alaska Native",
-                          @"Asian",
-                          @"Black or African America",
-                          @"Native Hawaiian or Pacific Islander",
-                          @"White",
-                          @"Other/Unknown"];
+    raceElement.items = self.raceValues;
 
     QRadioElement *settingElement = [[QRadioElement alloc] initWithKey:@"setting"];
     settingElement.selected = -1;
     settingElement.title = @"Crisis Setting";
-    settingElement.items = @[@"Homeless", @"Workplace", @"School", @"Home", @"Other"];
+    settingElement.items = self.settingValues;
 
-    QSection *patientDescriptionSection = [[QSection alloc] initWithTitle:@"Patient Description"];
     [patientDescriptionSection addElement:genderElement];
     [patientDescriptionSection addElement:ageElement];
     [patientDescriptionSection addElement:raceElement];
     [patientDescriptionSection addElement:settingElement];
 
-    QSelectSection *observationSection = [[QSelectSection alloc] init];
-    observationSection.title = @"Crisis Observations: Is the patient...";
-    observationSection.multipleAllowed = YES;
-    observationSection.items = @[@"At risk of harm", @"Under the influence", @"Anxious", @"Depressed", @"Aggravated", @"Threatening"];
-
-    QEntryElement *additionalDescription = [[QEntryElement alloc] initWithKey:@"description"];
-    additionalDescription.placeholder = @"Write important information here.";
+    self.observationSection = [[QSelectSection alloc] init];
+    self.observationSection.title = @"Crisis Observations: Is the patient...";
+    self.observationSection.multipleAllowed = YES;
+    self.observationSection.items = self.observationValues;
 
     QSection *additionalDescriptionSection = [[QSection alloc] initWithTitle:@"Additional Description..."];
+    QEntryElement *additionalDescription = [[QEntryElement alloc] initWithKey:@"description"];
+    additionalDescription.placeholder = @"Write additional important information here.";
     [additionalDescriptionSection addElement:additionalDescription];
 
-    [rootElement addSection:patientDescriptionSection];
-    [rootElement addSection:observationSection];
-    [rootElement addSection:additionalDescriptionSection];
+    [self.rootElement addSection:patientDescriptionSection];
+    [self.rootElement addSection:self.observationSection];
+    [self.rootElement addSection:additionalDescriptionSection];
 
-    self.quickDialogController = [QuickDialogController controllerForRoot:rootElement];
+    self.quickDialogController = [QuickDialogController controllerForRoot:self.rootElement];
     self.quickDialogController.view.backgroundColor = [UIColor clearColor];
     self.quickDialogController.quickDialogTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
@@ -102,7 +119,34 @@
 }
 
 - (IBAction)didTapUpdateCrisisButton:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    self.updateCrisisButton.enabled = NO;
+    [self.spinner startAnimating];
+
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [self.rootElement fetchValueIntoObject:params];
+    params[@"gender"] = self.genderValues[[params[@"gender"] intValue]];
+    params[@"age"] = self.ageValues[[params[@"age"] intValue]];
+    params[@"race"] = self.raceValues[[params[@"race"] intValue]];
+    params[@"setting"] = self.settingValues[[params[@"setting"] intValue]];
+    params[@"observations"] = [self.observationSection.selectedItems componentsJoinedByString:@", "];
+
+    [self.httpClient updateCrisisWithReportID:self.reportID
+                                       params:params
+                                    onSuccess:^(id object) {
+                                        self.updateCrisisButton.enabled = YES;
+                                        [self.spinner stopAnimating];
+                                        
+                                        [self dismissViewControllerAnimated:YES completion:nil];
+                                    } failure:^(NSError *error) {
+                                        self.updateCrisisButton.enabled = YES;
+                                        [self.spinner stopAnimating];
+
+                                        [[[UIAlertView alloc] initWithTitle:@"Error"
+                                                                    message:@"Something went wrong. Please try again."
+                                                                   delegate:nil
+                                                          cancelButtonTitle:@"OK"
+                                                          otherButtonTitles:nil] show];
+                                    }];
 }
 
 @end

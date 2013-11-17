@@ -12,4 +12,9 @@ typedef void(^FailureBlock)(NSError *error);
                    onSuccess:(SuccessBlock)success
                      failure:(FailureBlock)failure;
 
+- (void)updateCrisisWithReportID:(NSInteger)reportID
+                          params:(NSDictionary *)params
+                       onSuccess:(SuccessBlock)success
+                         failure:(FailureBlock)failure;
+
 @end

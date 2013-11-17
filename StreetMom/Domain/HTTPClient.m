@@ -38,4 +38,21 @@
                }];
 }
 
+- (void)updateCrisisWithReportID:(NSInteger)reportID
+                          params:(NSDictionary *)params
+                     onSuccess:(SuccessBlock)success
+                       failure:(FailureBlock)failure {
+    NSDictionary *postParams = @{@"report": params};
+    NSString *path = [NSString stringWithFormat:@"/reports/%ld", (long)reportID];
+
+    [self.manager PUT:path
+           parameters:postParams
+              success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                  success(responseObject);
+              }
+              failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                  failure(error);
+              }];
+}
+
 @end

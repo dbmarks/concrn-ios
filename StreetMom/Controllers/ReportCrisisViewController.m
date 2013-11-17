@@ -107,7 +107,8 @@
                                     [self.spinner stopAnimating];
 
                                     NSInteger reportID = [reportJSON[@"id"] integerValue];
-                                    UpdateCrisisViewController *updateCrisisVC = [[UpdateCrisisViewController alloc] initWithReportID:reportID];
+                                    UpdateCrisisViewController *updateCrisisVC = [[UpdateCrisisViewController alloc] initWithReportID:reportID
+                                                                                                                           httpClient:self.httpClient];
                                     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:updateCrisisVC];
                                     [self presentViewController:navController animated:YES completion:nil];
 

@@ -7,6 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UpdateCrisisViewController">
             <connections>
                 <outlet property="formContainerView" destination="Kme-2g-ykK" id="cjz-3J-AVo"/>
+                <outlet property="spinner" destination="04T-bd-hZT" id="bH6-hv-o7E"/>
+                <outlet property="updateCrisisButton" destination="hJf-X5-hYj" id="jFS-rT-Y8a"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -50,6 +52,10 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" id="04T-bd-hZT">
+                    <rect key="frame" x="150" y="250" width="20" height="20"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
