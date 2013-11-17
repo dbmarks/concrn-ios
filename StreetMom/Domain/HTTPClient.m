@@ -13,7 +13,7 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://localhost:3000"]];
+        self.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.streetmom.com"]];
         self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
         self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
     }
