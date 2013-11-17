@@ -31,7 +31,6 @@
     [super viewDidLoad];
 
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"streetmom_logo_small"]];
-    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:117/255.0 green:31/255.0 blue:214/255.0 alpha:1];
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:277/255.0 green:107/255.0 blue:110/255.0 alpha:1];
 
     self.locationManager = [[CLLocationManager alloc] init];
