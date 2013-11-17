@@ -12,6 +12,10 @@
 		5C9967A818395D9000D5CDDE /* streetmom_logo_small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967A618395D9000D5CDDE /* streetmom_logo_small@2x.png */; };
 		5C9967A918395D9000D5CDDE /* streetmom_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967A718395D9000D5CDDE /* streetmom_logo@2x.png */; };
 		5C9967AB18395E3D00D5CDDE /* button_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967AA18395E3D00D5CDDE /* button_background@2x.png */; };
+		5C9967B71839648300D5CDDE /* streetmom-app-icon58@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967B41839648300D5CDDE /* streetmom-app-icon58@2x.png */; };
+		5C9967B81839648300D5CDDE /* streetmom-app-icon80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967B51839648300D5CDDE /* streetmom-app-icon80@2x.png */; };
+		5C9967B91839648300D5CDDE /* streetmom-app-icon120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967B61839648300D5CDDE /* streetmom-app-icon120@2x.png */; };
+		5C9967BB183965E000D5CDDE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967BA183965E000D5CDDE /* Images.xcassets */; };
 		5CB0D2F21837FC44006230DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB0D2F11837FC44006230DA /* CoreLocation.framework */; };
 		5CB0D2F418380437006230DA /* ReportCrisisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */; };
 		5CB0D2F918380B92006230DA /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F818380B92006230DA /* HTTPClient.m */; };
@@ -36,7 +40,6 @@
 		5CC5DD531837EE74009B768D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5CC5DD511837EE74009B768D /* InfoPlist.strings */; };
 		5CC5DD551837EE74009B768D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD541837EE74009B768D /* main.m */; };
 		5CC5DD591837EE74009B768D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD581837EE74009B768D /* AppDelegate.m */; };
-		5CC5DD5B1837EE74009B768D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CC5DD5A1837EE74009B768D /* Images.xcassets */; };
 		5CC5DD7A1837F0E4009B768D /* ReportCrisisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */; };
 		5CC5DD7D1837F12D009B768D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD7C1837F12D009B768D /* MapKit.framework */; };
 		F17756B6183940B90017C9E0 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17756B4183940B90017C9E0 /* ProfileViewController.m */; };
@@ -74,6 +77,10 @@
 		5C9967A618395D9000D5CDDE /* streetmom_logo_small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "streetmom_logo_small@2x.png"; sourceTree = "<group>"; };
 		5C9967A718395D9000D5CDDE /* streetmom_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "streetmom_logo@2x.png"; sourceTree = "<group>"; };
 		5C9967AA18395E3D00D5CDDE /* button_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_background@2x.png"; sourceTree = "<group>"; };
+		5C9967B41839648300D5CDDE /* streetmom-app-icon58@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "streetmom-app-icon58@2x.png"; sourceTree = SOURCE_ROOT; };
+		5C9967B51839648300D5CDDE /* streetmom-app-icon80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "streetmom-app-icon80@2x.png"; sourceTree = SOURCE_ROOT; };
+		5C9967B61839648300D5CDDE /* streetmom-app-icon120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "streetmom-app-icon120@2x.png"; sourceTree = SOURCE_ROOT; };
+		5C9967BA183965E000D5CDDE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5CB0D2F11837FC44006230DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportCrisisViewController.xib; sourceTree = "<group>"; };
 		5CB0D2F718380B92006230DA /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
@@ -115,7 +122,6 @@
 		5CC5DD561837EE74009B768D /* StreetMom-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StreetMom-Prefix.pch"; sourceTree = "<group>"; };
 		5CC5DD571837EE74009B768D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5CC5DD581837EE74009B768D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5CC5DD5A1837EE74009B768D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5CC5DD611837EE75009B768D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5CC5DD781837F0E4009B768D /* ReportCrisisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCrisisViewController.h; sourceTree = "<group>"; };
 		5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCrisisViewController.m; sourceTree = "<group>"; };
@@ -198,6 +204,9 @@
 		5CB0D32F183830BE006230DA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5C9967B41839648300D5CDDE /* streetmom-app-icon58@2x.png */,
+				5C9967B51839648300D5CDDE /* streetmom-app-icon80@2x.png */,
+				5C9967B61839648300D5CDDE /* streetmom-app-icon120@2x.png */,
 				5CB0D330183830BE006230DA /* background@2x.jpg */,
 				5C9967AA18395E3D00D5CDDE /* button_background@2x.png */,
 				5CB0D331183830BE006230DA /* pin@2x.png */,
@@ -246,7 +255,7 @@
 				5CC5DD581837EE74009B768D /* AppDelegate.m */,
 				5CC5DD771837F094009B768D /* Controllers */,
 				5CB0D2F618380B79006230DA /* Domain */,
-				5CC5DD5A1837EE74009B768D /* Images.xcassets */,
+				5C9967BA183965E000D5CDDE /* Images.xcassets */,
 				5CC5DD4F1837EE74009B768D /* Supporting Files */,
 			);
 			path = StreetMom;
@@ -359,16 +368,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C9967B81839648300D5CDDE /* streetmom-app-icon80@2x.png in Resources */,
 				5CB0D334183830BE006230DA /* pin@2x.png in Resources */,
 				5CB0D2F418380437006230DA /* ReportCrisisViewController.xib in Resources */,
+				5C9967B91839648300D5CDDE /* streetmom-app-icon120@2x.png in Resources */,
 				F17756B7183940B90017C9E0 /* ProfileViewController.xib in Resources */,
 				5CB0D3261838252F006230DA /* UpdateCrisisViewController.xib in Resources */,
 				5CB0D32D18382F44006230DA /* UserInfoViewController.xib in Resources */,
 				5C9967AB18395E3D00D5CDDE /* button_background@2x.png in Resources */,
 				5CC5DD531837EE74009B768D /* InfoPlist.strings in Resources */,
+				5C9967BB183965E000D5CDDE /* Images.xcassets in Resources */,
 				5C9967A818395D9000D5CDDE /* streetmom_logo_small@2x.png in Resources */,
+				5C9967B71839648300D5CDDE /* streetmom-app-icon58@2x.png in Resources */,
 				5CB0D332183830BE006230DA /* background@2x.jpg in Resources */,
-				5CC5DD5B1837EE74009B768D /* Images.xcassets in Resources */,
 				5C9967A918395D9000D5CDDE /* streetmom_logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
