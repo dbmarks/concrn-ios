@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportCrisisViewController">
             <connections>
                 <outlet property="addressLabel" destination="6AT-pK-EtX" id="fxP-qb-rEO"/>
+                <outlet property="centerLocationButton" destination="VRH-JU-wqa" id="efW-ZH-Spz"/>
                 <outlet property="mapView" destination="qMQ-o2-Q0M" id="AXV-Gt-isP"/>
                 <outlet property="reportCrisisButton" destination="njU-0w-1Wc" id="B73-kD-M3l"/>
                 <outlet property="spinner" destination="2fl-rQ-r8C" id="oJe-Ak-Cfg"/>
@@ -65,6 +66,17 @@
                     <rect key="frame" x="151" y="225" width="20" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VRH-JU-wqa">
+                    <rect key="frame" x="7" y="400" width="37" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="center_location_button.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapCenterLocationButton:" destination="-1" eventType="touchUpInside" id="D3v-ON-q3m"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -74,5 +86,6 @@
     <resources>
         <image name="background.jpg" width="320" height="568"/>
         <image name="button_background.png" width="2" height="2"/>
+        <image name="center_location_button.png" width="37" height="37"/>
     </resources>
 </document>

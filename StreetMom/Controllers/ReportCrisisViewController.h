@@ -9,6 +9,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *reportCrisisButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property (weak, nonatomic) IBOutlet UIButton *centerLocationButton;
 
 - (instancetype)initWithHTTPClient:(HTTPClient *)httpClient;
 

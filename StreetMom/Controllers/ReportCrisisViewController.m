@@ -13,6 +13,7 @@
 @property (nonatomic) UIImageView *pinImageView;
 @property (nonatomic) CLGeocoder *geocoder;
 @property (nonatomic) NSString *address;
+@property (nonatomic) BOOL centeredOnUserLocation;
 
 @end
 
@@ -35,6 +36,7 @@
 
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
+    self.locationManager.pausesLocationUpdatesAutomatically = YES;
 
     self.mapView.showsPointsOfInterest = NO;
     self.mapView.delegate = self;
@@ -61,6 +63,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+
+    self.centeredOnUserLocation = NO;
 
     CGPoint mapCenter = self.mapView.center;
     self.pinImageView.center = CGPointMake(mapCenter.x, mapCenter.y - CGRectGetHeight(self.pinImageView.frame)/2);
@@ -131,6 +135,10 @@
     [self reportCrisis];
 }
 
+- (IBAction)didTapCenterLocationButton:(id)sender {
+    [self centerOnUserLocation];
+}
+
 #pragma mark <UIAlertViewDelegate>
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -165,13 +173,19 @@
 #pragma mark - <CLLocationManagerDelegate>
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    MKCoordinateSpan span = MKCoordinateSpanMake(.01, .01);
-    MKCoordinateRegion region = MKCoordinateRegionMake(manager.location.coordinate, span);
-    [self.mapView setRegion:region animated:YES];
-    [self.locationManager stopUpdatingLocation];
+    if (!self.centeredOnUserLocation) {
+        self.centeredOnUserLocation = YES;
+        [self centerOnUserLocation];
+    }
 }
 
 #pragma mark - Private
+
+- (void)centerOnUserLocation {
+    MKCoordinateSpan span = MKCoordinateSpanMake(.01, .01);
+    MKCoordinateRegion region = MKCoordinateRegionMake(self.locationManager.location.coordinate, span);
+    [self.mapView setRegion:region animated:YES];
+}
 
 - (void)reportCrisis {
     NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:UserNameKey];
