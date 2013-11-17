@@ -3,7 +3,7 @@
 
 @class HTTPClient, MKMapView;
 
-@interface ReportCrisisViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
+@interface ReportCrisisViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UIButton *reportCrisisButton;

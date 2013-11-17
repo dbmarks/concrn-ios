@@ -115,13 +115,30 @@
 #pragma mark - Action
 
 - (void)didTapCall911:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://911"]];
+    [[[UIAlertView alloc] initWithTitle:@"Tap OK to call 911"
+                                message:nil
+                               delegate:self
+                      cancelButtonTitle:@"Cancel"
+                      otherButtonTitles:@"OK", nil] show];
 }
 
 - (IBAction)didTapUpdateCrisisButton:(id)sender {
     self.updateCrisisButton.enabled = NO;
     [self.spinner startAnimating];
+    [self updateCrisis];
+}
 
+#pragma mark - <UIAlertViewDelegate>
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == alertView.firstOtherButtonIndex) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://911"]];
+    }
+}
+
+#pragma mark - Private
+
+- (void)updateCrisis {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [self.rootElement fetchValueIntoObject:params];
     params[@"gender"] = self.genderValues[[params[@"gender"] intValue]];
@@ -135,7 +152,7 @@
                                     onSuccess:^(id object) {
                                         self.updateCrisisButton.enabled = YES;
                                         [self.spinner stopAnimating];
-                                        
+
                                         [self dismissViewControllerAnimated:YES completion:nil];
                                     } failure:^(NSError *error) {
                                         self.updateCrisisButton.enabled = YES;

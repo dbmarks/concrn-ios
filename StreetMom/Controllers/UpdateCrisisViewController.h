@@ -2,7 +2,7 @@
 
 @class HTTPClient;
 
-@interface UpdateCrisisViewController : UIViewController
+@interface UpdateCrisisViewController : UIViewController <UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *formContainerView;
 @property (weak, nonatomic) IBOutlet UIButton *updateCrisisButton;

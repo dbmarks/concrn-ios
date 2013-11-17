@@ -118,13 +118,25 @@
 #pragma mark - Actions
 
 - (void)didTapCall911:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://911"]];
+    [[[UIAlertView alloc] initWithTitle:@"Tap OK to call 911"
+                                message:nil
+                               delegate:self
+                      cancelButtonTitle:@"Cancel"
+                      otherButtonTitles:@"OK", nil] show];
 }
 
 - (IBAction)didTapReportCrisisButton:(id)sender {
     self.reportCrisisButton.enabled = NO;
     [self.spinner startAnimating];
     [self reportCrisis];
+}
+
+#pragma mark <UIAlertViewDelegate>
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == alertView.firstOtherButtonIndex) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://911"]];
+    }
 }
 
 #pragma mark - <MKMapViewDelegate>
