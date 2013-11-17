@@ -31,7 +31,9 @@
     }];
 }
 
-- (void)getResponderProfileForPhoneNumber:(NSString*)phoneNumber onSuccess:(SuccessBlock)success onFailure:(FailureBlock)failure {
+- (void)getResponderProfileForPhoneNumber:(NSString*)phoneNumber
+                                onSuccess:(SuccessBlock)success
+                                onFailure:(FailureBlock)failure {
     
     [self.manager GET:@"/responders/by_phone"
            parameters: @{@"phone": phoneNumber}
@@ -42,10 +44,11 @@
             }];
 }
 
-- (void)updateResponder:(NSDictionary*)updates onSuccess:(SuccessBlock)success onFailure:(FailureBlock)failure {
+- (void)updateResponder:(NSDictionary*)updates
+              onSuccess:(SuccessBlock)success
+              onFailure:(FailureBlock)failure {
     NSString* phone = [[NSUserDefaults standardUserDefaults] valueForKey: UserPhoneNumberKey];
     NSString* url = [NSString stringWithFormat:@"/responders/%@", phone];
-    
 
     [self.manager PATCH:url
              parameters: @{@"responder": updates}
@@ -77,19 +80,19 @@
 
 - (void)updateCrisisWithReportID:(NSInteger)reportID
                           params:(NSDictionary *)params
-                     onSuccess:(SuccessBlock)success
-                       failure:(FailureBlock)failure {
+                       onSuccess:(SuccessBlock)success
+                         failure:(FailureBlock)failure {
     NSDictionary *postParams = @{@"report": params};
     NSString *path = [NSString stringWithFormat:@"/reports/%ld", (long)reportID];
 
-    [self.manager PUT:path
-           parameters:postParams
-              success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                  success(responseObject);
-              }
-              failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                  failure(error);
-              }];
+    [self.manager PATCH:path
+             parameters:postParams
+                success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                    success(responseObject);
+                }
+                failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                    failure(error);
+                }];
 }
 
 @end

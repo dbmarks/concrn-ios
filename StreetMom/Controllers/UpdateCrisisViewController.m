@@ -83,7 +83,7 @@
     self.observationSection.items = self.observationValues;
 
     QSection *additionalDescriptionSection = [[QSection alloc] initWithTitle:@"Additional Description..."];
-    QEntryElement *additionalDescription = [[QEntryElement alloc] initWithKey:@"description"];
+    QEntryElement *additionalDescription = [[QEntryElement alloc] initWithKey:@"nature"];
     additionalDescription.placeholder = @"Write additional important information here.";
     [additionalDescriptionSection addElement:additionalDescription];
 

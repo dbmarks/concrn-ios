@@ -140,12 +140,6 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     MKCoordinateSpan span = MKCoordinateSpanMake(.01, .01);
     MKCoordinateRegion region = MKCoordinateRegionMake(manager.location.coordinate, span);
-    [self.httpClient getCrisisListAroundCoordinate:manager.location.coordinate onSuccess:^(NSArray* crisisList) {
-        
-    } onFailure:^(NSError *error) {
-        
-        
-    }];
     [self.mapView setRegion:region animated:YES];
     [self.locationManager stopUpdatingLocation];
 }
