@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C99679A18385B5100D5CDDE /* libQuickDialog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C99679718385B1F00D5CDDE /* libQuickDialog.a */; };
+		5C99679D183865A300D5CDDE /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C99679C183865A300D5CDDE /* SurveyViewController.m */; };
 		5CB0D2F21837FC44006230DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB0D2F11837FC44006230DA /* CoreLocation.framework */; };
 		5CB0D2F418380437006230DA /* ReportCrisisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */; };
 		5CB0D2F918380B92006230DA /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F818380B92006230DA /* HTTPClient.m */; };
@@ -36,7 +38,34 @@
 		5CC5DD7D1837F12D009B768D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD7C1837F12D009B768D /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5C99679418385B1F00D5CDDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C99678F18385B1F00D5CDDE /* QuickDialog.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D80B0E3313E052DF00FA85CA;
+			remoteInfo = QuickDialogExample;
+		};
+		5C99679618385B1F00D5CDDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C99678F18385B1F00D5CDDE /* QuickDialog.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2C542393145ADEBD0026A152;
+			remoteInfo = QuickDialog;
+		};
+		5C99679818385B4B00D5CDDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C99678F18385B1F00D5CDDE /* QuickDialog.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C542392145ADEBD0026A152;
+			remoteInfo = QuickDialog;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		5C99678F18385B1F00D5CDDE /* QuickDialog.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QuickDialog.xcodeproj; path = Vendor/QuickDialog/QuickDialog.xcodeproj; sourceTree = "<group>"; };
+		5C99679B183865A300D5CDDE /* SurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurveyViewController.h; sourceTree = "<group>"; };
+		5C99679C183865A300D5CDDE /* SurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurveyViewController.m; sourceTree = "<group>"; };
 		5CB0D2F11837FC44006230DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportCrisisViewController.xib; sourceTree = "<group>"; };
 		5CB0D2F718380B92006230DA /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
@@ -90,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C99679A18385B5100D5CDDE /* libQuickDialog.a in Frameworks */,
 				5CB0D2F21837FC44006230DA /* CoreLocation.framework in Frameworks */,
 				5CC5DD7D1837F12D009B768D /* MapKit.framework in Frameworks */,
 				5CC5DD4B1837EE74009B768D /* CoreGraphics.framework in Frameworks */,
@@ -101,6 +131,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C99678C18385AEC00D5CDDE /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				5C99678F18385B1F00D5CDDE /* QuickDialog.xcodeproj */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		5C99679018385B1F00D5CDDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C99679518385B1F00D5CDDE /* QuickDialogExample.app */,
+				5C99679718385B1F00D5CDDE /* libQuickDialog.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5CB0D2F618380B79006230DA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +200,7 @@
 				5CC5DD461837EE74009B768D /* Products */,
 				5CB0D32F183830BE006230DA /* Resources */,
 				5CC5DD4E1837EE74009B768D /* StreetMom */,
+				5C99678C18385AEC00D5CDDE /* Vendor */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,6 +261,8 @@
 				5CB0D32818382F44006230DA /* UserInfoViewController.h */,
 				5CB0D32918382F44006230DA /* UserInfoViewController.m */,
 				5CB0D32A18382F44006230DA /* UserInfoViewController.xib */,
+				5C99679B183865A300D5CDDE /* SurveyViewController.h */,
+				5C99679C183865A300D5CDDE /* SurveyViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -231,6 +281,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5C99679918385B4B00D5CDDE /* PBXTargetDependency */,
 			);
 			name = StreetMom;
 			productName = StreetMom;
@@ -256,12 +307,35 @@
 			mainGroup = 5CC5DD3C1837EE74009B768D;
 			productRefGroup = 5CC5DD461837EE74009B768D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5C99679018385B1F00D5CDDE /* Products */;
+					ProjectRef = 5C99678F18385B1F00D5CDDE /* QuickDialog.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5CC5DD441837EE74009B768D /* StreetMom */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5C99679518385B1F00D5CDDE /* QuickDialogExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = QuickDialogExample.app;
+			remoteRef = 5C99679418385B1F00D5CDDE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5C99679718385B1F00D5CDDE /* libQuickDialog.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libQuickDialog.a;
+			remoteRef = 5C99679618385B1F00D5CDDE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5CC5DD431837EE74009B768D /* Resources */ = {
@@ -299,11 +373,20 @@
 				5CB0D31518381AE4006230DA /* AFNetworkReachabilityManager.m in Sources */,
 				5CB0D31D18381AE4006230DA /* AFURLResponseSerialization.m in Sources */,
 				5CB0D31F18381AE4006230DA /* AFURLSessionManager.m in Sources */,
+				5C99679D183865A300D5CDDE /* SurveyViewController.m in Sources */,
 				5CC5DD551837EE74009B768D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C99679918385B4B00D5CDDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QuickDialog;
+			targetProxy = 5C99679818385B4B00D5CDDE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5CC5DD511837EE74009B768D /* InfoPlist.strings */ = {
@@ -320,7 +403,7 @@
 		5CC5DD6F1837EE75009B768D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -352,14 +435,16 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Vendor/QuickDialog/**";
 			};
 			name = Debug;
 		};
 		5CC5DD701837EE75009B768D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -384,7 +469,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "${PROJECT_DIR}/Vendor/QuickDialog/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -392,12 +479,19 @@
 		5CC5DD721837EE75009B768D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StreetMom/StreetMom-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = "StreetMom/StreetMom-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Vendor/QuickDialog\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -405,12 +499,19 @@
 		5CC5DD731837EE75009B768D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StreetMom/StreetMom-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = "StreetMom/StreetMom-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Vendor/QuickDialog\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

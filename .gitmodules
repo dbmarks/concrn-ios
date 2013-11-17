@@ -1,0 +1,3 @@
+[submodule "Vendor/QuickDialog"]
+	path = Vendor/QuickDialog
+	url = https://github.com/escoz/QuickDialog

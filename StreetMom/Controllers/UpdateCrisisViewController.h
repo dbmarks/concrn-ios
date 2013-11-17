@@ -1,8 +1,8 @@
 #import <UIKit/UIKit.h>
 
-@interface UpdateCrisisViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface UpdateCrisisViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *formContainerView;
 
 - (instancetype)initWithReportID:(NSInteger)reportID;
 

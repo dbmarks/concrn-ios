@@ -6,7 +6,6 @@
 @interface ReportCrisisViewController ()
 
 @property (nonatomic) CLLocationManager *locationManager;
-@property (nonatomic) UIBarButtonItem *nineOneOneButton;
 @property (nonatomic) HTTPClient *httpClient;
 @property (nonatomic) UIImageView *pinImageView;
 
@@ -36,11 +35,11 @@
 
     self.pinImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pin"]];
 
-    self.nineOneOneButton = [[UIBarButtonItem alloc] initWithTitle:@"911"
-                                                             style:UIBarButtonItemStyleDone
-                                                            target:self
-                                                            action:@selector(didTapCall911:)];
-    self.navigationItem.rightBarButtonItem = self.nineOneOneButton;
+    UIBarButtonItem *nineOneOneButton = [[UIBarButtonItem alloc] initWithTitle:@"911"
+                                                                         style:UIBarButtonItemStyleDone
+                                                                        target:self
+                                                                        action:@selector(didTapCall911:)];
+    self.navigationItem.rightBarButtonItem = nineOneOneButton;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
