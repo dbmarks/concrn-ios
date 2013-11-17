@@ -13,7 +13,7 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.streetmom.com"]];
+        self.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://localhost:3000"]];
         self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
         self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
     }
@@ -52,6 +52,7 @@
                  phoneNumber:(NSString *)phoneNumber
                   coordinate:(CLLocationCoordinate2D)coordinate
                      address:(NSString *)address
+                neighborhood:(NSString *)neighborhood
                    onSuccess:(SuccessBlock)success
                      failure:(FailureBlock)failure {
     NSMutableDictionary *postParams = [NSMutableDictionary dictionaryWithDictionary:
@@ -62,6 +63,10 @@
                                          }];
     if (address) {
         postParams[@"address"] = address;
+    }
+
+    if (neighborhood) {
+        postParams[@"neighborhood"] = neighborhood;
     }
 
     [self.manager POST:@"/reports"

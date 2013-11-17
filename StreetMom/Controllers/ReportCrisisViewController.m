@@ -13,6 +13,7 @@
 @property (nonatomic) UIImageView *pinImageView;
 @property (nonatomic) CLGeocoder *geocoder;
 @property (nonatomic) NSString *address;
+@property (nonatomic) NSString *neighborhood;
 @property (nonatomic) BOOL centeredOnUserLocation;
 
 @end
@@ -161,11 +162,13 @@
                             CLPlacemark *placemark = [placemarks firstObject];
                             if (placemark) {
                                 self.address = ABCreateStringWithAddressDictionary(placemark.addressDictionary, NO);
-                                NSString* street = placemark.addressDictionary[@"Street"];
-                                if (street)
+                                self.neighborhood = placemark.addressDictionary[@"SubLocality"];
+                                NSString *street = placemark.addressDictionary[@"Street"];
+                                if (street) {
                                     self.addressLabel.text = [NSString stringWithFormat:@"%@", street];
-                                else
-                                    self.addressLabel.text = @"No address yet";
+                                } else {
+                                    self.addressLabel.text = @"Address unavailable";
+                                }
                             }
                         }];
 }
@@ -195,6 +198,7 @@
                               phoneNumber:phoneNumber
                                coordinate:self.mapView.centerCoordinate
                                   address:self.address
+                             neighborhood:self.neighborhood
                                 onSuccess:^(NSDictionary *reportJSON) {
                                     self.reportCrisisButton.enabled = YES;
                                     [self.spinner stopAnimating];

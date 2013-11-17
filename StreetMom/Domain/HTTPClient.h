@@ -18,6 +18,7 @@ typedef void(^FailureBlock)(NSError *error);
                  phoneNumber:(NSString *)phoneNumber
                   coordinate:(CLLocationCoordinate2D)coordinate
                      address:(NSString *)address
+                neighborhood:(NSString *)neighborhood
                    onSuccess:(SuccessBlock)success
                      failure:(FailureBlock)failure;
 
