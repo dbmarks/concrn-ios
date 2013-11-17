@@ -179,8 +179,9 @@
                                     self.reportCrisisButton.enabled = YES;
                                     [self.spinner stopAnimating];
                                     [[[UIAlertView alloc] initWithTitle:@"Error"
-                                                                message:@"Something went wrong"
-                                                               delegate:nil cancelButtonTitle:@"OK"
+                                                                message:@"Something went wrong. Please try again."
+                                                               delegate:nil
+                                                      cancelButtonTitle:@"OK"
                                                       otherButtonTitles:nil] show];
                                 }];
 }
