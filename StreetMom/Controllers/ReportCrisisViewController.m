@@ -4,12 +4,15 @@
 #import "UserInfoViewController.h"
 #import "ProfileViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import <AddressBookUI/AddressBookUI.h>
 
 @interface ReportCrisisViewController ()
 
 @property (nonatomic) CLLocationManager *locationManager;
 @property (nonatomic) HTTPClient *httpClient;
 @property (nonatomic) UIImageView *pinImageView;
+@property (nonatomic) CLGeocoder *geocoder;
+@property (nonatomic) NSString *address;
 
 @end
 
@@ -18,6 +21,7 @@
 - (instancetype)initWithHTTPClient:(HTTPClient *)httpClient {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
+        self.geocoder = [[CLGeocoder alloc] init];
         self.httpClient = httpClient;
     }
     return self;
@@ -142,6 +146,17 @@
     if (self.pinImageView.superview == nil) {
         [self.view addSubview:self.pinImageView];
     }
+
+    CLLocationCoordinate2D centerCoordinate = self.mapView.centerCoordinate;
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:centerCoordinate.latitude longitude:centerCoordinate.longitude];
+    [self.geocoder reverseGeocodeLocation:location
+                        completionHandler:^(NSArray *placemarks, NSError *error) {
+                            CLPlacemark *placemark = [placemarks firstObject];
+                            if (placemark) {
+                                self.address = ABCreateStringWithAddressDictionary(placemark.addressDictionary, NO);
+                                self.addressLabel.text = [NSString stringWithFormat:@"%@", placemark.addressDictionary[@"Street"]];
+                            }
+                        }];
 }
 
 #pragma mark - <CLLocationManagerDelegate>
@@ -162,6 +177,7 @@
     [self.httpClient reportCrisisWithName:name
                               phoneNumber:phoneNumber
                                coordinate:self.mapView.centerCoordinate
+                                  address:self.address
                                 onSuccess:^(NSDictionary *reportJSON) {
                                     self.reportCrisisButton.enabled = YES;
                                     [self.spinner stopAnimating];

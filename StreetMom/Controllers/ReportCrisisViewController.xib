@@ -4,8 +4,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChooseLocationViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReportCrisisViewController">
             <connections>
+                <outlet property="addressLabel" destination="6AT-pK-EtX" id="fxP-qb-rEO"/>
                 <outlet property="mapView" destination="qMQ-o2-Q0M" id="AXV-Gt-isP"/>
                 <outlet property="reportCrisisButton" destination="njU-0w-1Wc" id="B73-kD-M3l"/>
                 <outlet property="spinner" destination="2fl-rQ-r8C" id="oJe-Ak-Cfg"/>
@@ -22,15 +23,15 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" id="qMQ-o2-Q0M">
-                    <rect key="frame" x="0.0" y="64" width="320" height="418"/>
+                    <rect key="frame" x="0.0" y="64" width="320" height="382"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 </mapView>
                 <view contentMode="scaleToFill" id="DAJ-QM-SAd">
-                    <rect key="frame" x="0.0" y="483" width="320" height="85"/>
+                    <rect key="frame" x="0.0" y="448" width="320" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="njU-0w-1Wc">
-                            <rect key="frame" x="20" y="20" width="280" height="45"/>
+                            <rect key="frame" x="20" y="40" width="280" height="45"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
@@ -43,6 +44,20 @@
                                 <action selector="didTapReportCrisisButton:" destination="-1" eventType="touchUpInside" id="fz4-yz-14O"/>
                             </connections>
                         </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In case of emergency, always call 911" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zCX-IL-jp2">
+                            <rect key="frame" x="10" y="91" width="300" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6AT-pK-EtX">
+                            <rect key="frame" x="10" y="6" width="300" height="26"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>

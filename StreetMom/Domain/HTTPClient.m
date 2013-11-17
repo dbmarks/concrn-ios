@@ -42,7 +42,8 @@
              parameters: @{@"responder": updates}
                 success:^(AFHTTPRequestOperation *operation, id responseObject) {
                     success(responseObject);
-                } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                }
+                failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                     failure(error);
                 }];
 }
@@ -50,12 +51,19 @@
 - (void)reportCrisisWithName:(NSString *)name
                  phoneNumber:(NSString *)phoneNumber
                   coordinate:(CLLocationCoordinate2D)coordinate
+                     address:(NSString *)address
                    onSuccess:(SuccessBlock)success
                      failure:(FailureBlock)failure {
-    NSDictionary *postParams = @{@"report": @{@"name": name,
-                                              @"phone": phoneNumber,
-                                              @"lat": @(coordinate.latitude),
-                                              @"long": @(coordinate.longitude)}};
+    NSMutableDictionary *postParams = [NSMutableDictionary dictionaryWithDictionary:
+                                       @{@"report": @{@"name": name,
+                                                      @"phone": phoneNumber,
+                                                      @"lat": @(coordinate.latitude),
+                                                      @"long": @(coordinate.longitude)}
+                                         }];
+    if (address) {
+        postParams[@"address"] = address;
+    }
+
     [self.manager POST:@"/reports"
             parameters:postParams
                success:^(AFHTTPRequestOperation *operation, id responseObject) {
