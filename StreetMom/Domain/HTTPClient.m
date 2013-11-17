@@ -55,17 +55,17 @@
                    onSuccess:(SuccessBlock)success
                      failure:(FailureBlock)failure {
     NSMutableDictionary *postParams = [NSMutableDictionary dictionaryWithDictionary:
-                                       @{@"report": @{@"name": name,
-                                                      @"phone": phoneNumber,
-                                                      @"lat": @(coordinate.latitude),
-                                                      @"long": @(coordinate.longitude)}
+                                       @{@"name": name,
+                                         @"phone": phoneNumber,
+                                         @"lat": @(coordinate.latitude),
+                                         @"long": @(coordinate.longitude)
                                          }];
     if (address) {
         postParams[@"address"] = address;
     }
 
     [self.manager POST:@"/reports"
-            parameters:postParams
+            parameters:@{@"report": postParams}
                success:^(AFHTTPRequestOperation *operation, id responseObject) {
                    success(responseObject);
                }
