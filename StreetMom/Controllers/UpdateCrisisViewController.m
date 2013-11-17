@@ -45,7 +45,7 @@
     self.raceValues = @[@"Hispanic or Latino",
                         @"American Indian or Alaska Native",
                         @"Asian",
-                        @"Black or African America",
+                        @"Black or African American",
                         @"Native Hawaiian or Pacific Islander",
                         @"White",
                         @"Other/Unknown"];
