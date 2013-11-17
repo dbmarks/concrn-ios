@@ -20,21 +20,9 @@
     return self;
 }
 
-- (void)getCrisisListNearCoordinate:(CLLocationCoordinate2D)coordinate onSuccess:(SuccessBlock)success onFailure:(FailureBlock)failure{
-    
-    [self.manager GET:@"/reports"
-           parameters:@{@"coordinate": @{@"lat": [NSNumber numberWithDouble:coordinate.latitude], @"long": [NSNumber numberWithDouble:coordinate.longitude]}} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        success(responseObject);
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        failure(error);
-    }];
-}
-
 - (void)getResponderProfileForPhoneNumber:(NSString*)phoneNumber
                                 onSuccess:(SuccessBlock)success
                                 onFailure:(FailureBlock)failure {
-    
     [self.manager GET:@"/responders/by_phone"
            parameters: @{@"phone": phoneNumber}
             success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -47,8 +35,8 @@
 - (void)updateResponder:(NSDictionary*)updates
               onSuccess:(SuccessBlock)success
               onFailure:(FailureBlock)failure {
-    NSString* phone = [[NSUserDefaults standardUserDefaults] valueForKey: UserPhoneNumberKey];
-    NSString* url = [NSString stringWithFormat:@"/responders/%@", phone];
+    NSString *phone = [[NSUserDefaults standardUserDefaults] valueForKey: UserPhoneNumberKey];
+    NSString *url = [NSString stringWithFormat:@"/responders/%@", phone];
 
     [self.manager PATCH:url
              parameters: @{@"responder": updates}
