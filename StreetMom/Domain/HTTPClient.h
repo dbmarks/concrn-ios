@@ -1,15 +1,14 @@
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 typedef void(^SuccessBlock)(id object);
 typedef void(^FailureBlock)(NSError *error);
-
-@class CLLocation;
 
 @interface HTTPClient : NSObject <NSURLSessionDelegate>
 
 - (void)reportCrisisWithName:(NSString *)name
                  phoneNumber:(NSString *)phoneNumber
-                    location:(CLLocation *)location
+                  coordinate:(CLLocationCoordinate2D)coordinate
                    onSuccess:(SuccessBlock)success
                      failure:(FailureBlock)failure;
 

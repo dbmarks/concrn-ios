@@ -1,13 +1,15 @@
-#import <MapKit/MapKit.h>
 #import "ReportCrisisViewController.h"
 #import "HTTPClient.h"
 #import "UpdateCrisisViewController.h"
 #import "UserInfoViewController.h"
 
 @interface ReportCrisisViewController ()
+
 @property (nonatomic) CLLocationManager *locationManager;
 @property (nonatomic) UIBarButtonItem *nineOneOneButton;
 @property (nonatomic) HTTPClient *httpClient;
+@property (nonatomic) UIImageView *pinImageView;
+
 @end
 
 @implementation ReportCrisisViewController
@@ -30,8 +32,11 @@
     self.locationManager.delegate = self;
 
     self.mapView.showsPointsOfInterest = NO;
+    self.mapView.delegate = self;
 
-    self.nineOneOneButton = [[UIBarButtonItem alloc] initWithTitle:@"Call 911"
+    self.pinImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pin"]];
+
+    self.nineOneOneButton = [[UIBarButtonItem alloc] initWithTitle:@"911"
                                                              style:UIBarButtonItemStyleDone
                                                             target:self
                                                             action:@selector(didTapCall911:)];
@@ -41,18 +46,23 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
+    CGPoint mapCenter = self.mapView.center;
+    self.pinImageView.center = CGPointMake(mapCenter.x, mapCenter.y - CGRectGetHeight(self.pinImageView.frame)/2);
+    self.spinner.center = mapCenter;
+
     if ([[NSUserDefaults standardUserDefaults] valueForKey:UserEnteredUserInfoKey] == nil) {
         UserInfoViewController *userInfoViewController = [[UserInfoViewController alloc] init];
         [self presentViewController:userInfoViewController animated:NO completion:nil];
+    } else {
+        [self.locationManager startUpdatingLocation];
     }
-
-    [self.locationManager startUpdatingLocation];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
 
     [self.locationManager stopUpdatingLocation];
+    [self.pinImageView removeFromSuperview];
 }
 
 #pragma mark - Actions
@@ -64,13 +74,35 @@
 - (IBAction)didTapReportCrisisButton:(id)sender {
     self.reportCrisisButton.enabled = NO;
     [self.spinner startAnimating];
+    [self reportCrisis];
+}
 
+#pragma mark - <MKMapViewDelegate>
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+    if (self.pinImageView.superview == nil) {
+        [self.view addSubview:self.pinImageView];
+    }
+}
+
+#pragma mark - <CLLocationManagerDelegate>
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    MKCoordinateSpan span = MKCoordinateSpanMake(.01, .01);
+    MKCoordinateRegion region = MKCoordinateRegionMake(manager.location.coordinate, span);
+    [self.mapView setRegion:region animated:YES];
+    [self.locationManager stopUpdatingLocation];
+}
+
+#pragma mark - Private
+
+- (void)reportCrisis {
     NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:UserNameKey];
     NSString *phoneNumber = [[NSUserDefaults standardUserDefaults] valueForKey:UserPhoneNumberKey];
 
     [self.httpClient reportCrisisWithName:name
                               phoneNumber:phoneNumber
-                                 location:self.locationManager.location
+                               coordinate:self.mapView.centerCoordinate
                                 onSuccess:^(NSDictionary *reportJSON) {
                                     self.reportCrisisButton.enabled = YES;
                                     [self.spinner stopAnimating];
@@ -88,15 +120,6 @@
                                                                delegate:nil cancelButtonTitle:@"OK"
                                                       otherButtonTitles:nil] show];
                                 }];
-}
-
-#pragma mark - <CLLocationManagerDelegate>
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    MKCoordinateSpan span = MKCoordinateSpanMake(.01, .01);
-    MKCoordinateRegion region = MKCoordinateRegionMake(manager.location.coordinate, span);
-    [self.mapView setRegion:region animated:YES];
-    [self.locationManager stopUpdatingLocation];
 }
 
 @end

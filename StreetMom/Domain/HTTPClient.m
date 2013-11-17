@@ -1,6 +1,5 @@
 #import "HTTPClient.h"
 #import "AFNetworking.h"
-#import <CoreLocation/CoreLocation.h>
 
 @interface HTTPClient ()
 
@@ -22,13 +21,13 @@
 
 - (void)reportCrisisWithName:(NSString *)name
                  phoneNumber:(NSString *)phoneNumber
-                    location:(CLLocation *)location
+                  coordinate:(CLLocationCoordinate2D)coordinate
                    onSuccess:(SuccessBlock)success
                      failure:(FailureBlock)failure {
     NSDictionary *postParams = @{@"report": @{@"name": name,
                                               @"phone": phoneNumber,
-                                              @"lat": @(location.coordinate.latitude),
-                                              @"long": @(location.coordinate.longitude)}};
+                                              @"lat": @(coordinate.latitude),
+                                              @"long": @(coordinate.longitude)}};
     [self.manager POST:@"/reports"
             parameters:postParams
                success:^(AFHTTPRequestOperation *operation, id responseObject) {
