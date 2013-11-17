@@ -153,7 +153,11 @@
                             CLPlacemark *placemark = [placemarks firstObject];
                             if (placemark) {
                                 self.address = ABCreateStringWithAddressDictionary(placemark.addressDictionary, NO);
-                                self.addressLabel.text = [NSString stringWithFormat:@"%@", placemark.addressDictionary[@"Street"]];
+                                NSString* street = placemark.addressDictionary[@"Street"];
+                                if (street)
+                                    self.addressLabel.text = [NSString stringWithFormat:@"%@", street];
+                                else
+                                    self.addressLabel.text = @"No address yet";
                             }
                         }];
 }
