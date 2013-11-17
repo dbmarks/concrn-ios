@@ -2,6 +2,7 @@
 #import "HTTPClient.h"
 #import "UpdateCrisisViewController.h"
 #import "UserInfoViewController.h"
+#import "ProfileViewController.h"
 
 @interface ReportCrisisViewController ()
 
@@ -39,6 +40,14 @@
                                                                          style:UIBarButtonItemStyleDone
                                                                         target:self
                                                                         action:@selector(didTapCall911:)];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:UserAvailabilityKey object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+        
+        [self updateProfile:note.userInfo];
+        
+    }];
+
+    
     self.navigationItem.rightBarButtonItem = nineOneOneButton;
 }
 
@@ -53,9 +62,51 @@
         UserInfoViewController *userInfoViewController = [[UserInfoViewController alloc] init];
         [self presentViewController:userInfoViewController animated:NO completion:nil];
     } else {
+        NSString* phoneNumber = [[NSUserDefaults standardUserDefaults] valueForKey:UserPhoneNumberKey];
+        
+        [self.httpClient getResponderProfileForPhoneNumber:phoneNumber onSuccess:^(id object) {
+            NSDictionary* responder = object;
+            [self setResponderProfile: responder];
+            
+
+        } onFailure:^(NSError *error) {
+            
+            
+        }];
         [self.locationManager startUpdatingLocation];
     }
 }
+
+- (void)updateProfile:(NSDictionary*)updates {
+    [self.httpClient updateResponder:updates onSuccess:^(id object) {
+        [self setResponderProfile: object];
+    } onFailure:^(NSError *error) {
+        
+        
+    }];
+    
+}
+
+- (void)setResponderProfile:(NSDictionary*)profile {
+    NSString* title = [profile[@"availability"] isEqualToString:@"available"] ? @"Available" : @"Unavailable";
+    [[NSUserDefaults standardUserDefaults] setValue: profile[@"availability"] forKey:UserAvailabilityKey];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle: title
+                                                                             style: UIBarButtonItemStylePlain
+                                                                            target: self
+                                                                            action: @selector(didTapAvailable:)];
+}
+
+
+- (void)didTapAvailable:(id)sender {
+    ProfileViewController* profileViewController = [[ProfileViewController alloc] init];
+    [self.navigationController pushViewController:profileViewController animated:YES];
+    
+    
+    
+}
+
+
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -89,6 +140,12 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     MKCoordinateSpan span = MKCoordinateSpanMake(.01, .01);
     MKCoordinateRegion region = MKCoordinateRegionMake(manager.location.coordinate, span);
+    [self.httpClient getCrisisListAroundCoordinate:manager.location.coordinate onSuccess:^(NSArray* crisisList) {
+        
+    } onFailure:^(NSError *error) {
+        
+        
+    }];
     [self.mapView setRegion:region animated:YES];
     [self.locationManager stopUpdatingLocation];
 }

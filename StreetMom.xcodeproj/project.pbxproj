@@ -36,6 +36,8 @@
 		5CC5DD5B1837EE74009B768D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CC5DD5A1837EE74009B768D /* Images.xcassets */; };
 		5CC5DD7A1837F0E4009B768D /* ReportCrisisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */; };
 		5CC5DD7D1837F12D009B768D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD7C1837F12D009B768D /* MapKit.framework */; };
+		F17756B6183940B90017C9E0 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17756B4183940B90017C9E0 /* ProfileViewController.m */; };
+		F17756B7183940B90017C9E0 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F17756B5183940B90017C9E0 /* ProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,9 @@
 		5CC5DD781837F0E4009B768D /* ReportCrisisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCrisisViewController.h; sourceTree = "<group>"; };
 		5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCrisisViewController.m; sourceTree = "<group>"; };
 		5CC5DD7C1837F12D009B768D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F17756B3183940B90017C9E0 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		F17756B4183940B90017C9E0 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		F17756B5183940B90017C9E0 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +257,9 @@
 		5CC5DD771837F094009B768D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F17756B3183940B90017C9E0 /* ProfileViewController.h */,
+				F17756B4183940B90017C9E0 /* ProfileViewController.m */,
+				F17756B5183940B90017C9E0 /* ProfileViewController.xib */,
 				5CC5DD781837F0E4009B768D /* ReportCrisisViewController.h */,
 				5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */,
 				5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */,
@@ -344,6 +352,7 @@
 			files = (
 				5CB0D334183830BE006230DA /* pin@2x.png in Resources */,
 				5CB0D2F418380437006230DA /* ReportCrisisViewController.xib in Resources */,
+				F17756B7183940B90017C9E0 /* ProfileViewController.xib in Resources */,
 				5CB0D3261838252F006230DA /* UpdateCrisisViewController.xib in Resources */,
 				5CB0D32D18382F44006230DA /* UserInfoViewController.xib in Resources */,
 				5CC5DD531837EE74009B768D /* InfoPlist.strings in Resources */,
@@ -368,6 +377,7 @@
 				5CB0D31918381AE4006230DA /* AFURLConnectionOperation.m in Sources */,
 				5CB0D30F18381AE4006230DA /* AFHTTPRequestOperation.m in Sources */,
 				5CB0D2F918380B92006230DA /* HTTPClient.m in Sources */,
+				F17756B6183940B90017C9E0 /* ProfileViewController.m in Sources */,
 				5CB0D31B18381AE4006230DA /* AFURLRequestSerialization.m in Sources */,
 				5CB0D31318381AE4006230DA /* AFHTTPSessionManager.m in Sources */,
 				5CB0D31518381AE4006230DA /* AFNetworkReachabilityManager.m in Sources */,

@@ -11,6 +11,14 @@ typedef void(^FailureBlock)(NSError *error);
                   coordinate:(CLLocationCoordinate2D)coordinate
                    onSuccess:(SuccessBlock)success
                      failure:(FailureBlock)failure;
+- (void)getCrisisListAroundCoordinate: (CLLocationCoordinate2D)coordinate
+                            onSuccess:(SuccessBlock)success
+                            onFailure:(FailureBlock)failure;
+
+- (void)getResponderProfileForPhoneNumber:(NSString*)phoneNumber
+                                onSuccess:(SuccessBlock)success
+                                onFailure:(FailureBlock)failure;
+- (void)updateResponder:(NSDictionary*)updates onSuccess:(SuccessBlock)success onFailure:(FailureBlock)failure;
 
 - (void)updateCrisisWithReportID:(NSInteger)reportID
                           params:(NSDictionary *)params

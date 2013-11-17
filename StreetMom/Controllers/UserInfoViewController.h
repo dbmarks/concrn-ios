@@ -3,6 +3,7 @@
 static NSString *UserEnteredUserInfoKey = @"UserEnteredUserInfo";
 static NSString *UserNameKey = @"UserName";
 static NSString *UserPhoneNumberKey = @"UserPhoneNumber";
+static NSString *UserAvailabilityKey = @"UserAvailability";
 
 @interface UserInfoViewController : UIViewController <UITextFieldDelegate>
 
