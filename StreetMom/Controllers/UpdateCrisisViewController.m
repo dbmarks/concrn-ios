@@ -49,7 +49,7 @@
                         @"Native Hawaiian or Pacific Islander",
                         @"White",
                         @"Other/Unknown"];
-    self.settingValues = @[@"Homeless", @"Workplace", @"School", @"Home", @"Other"];
+    self.settingValues = @[@"Public Space", @"Workplace", @"School", @"Home", @"Other"];
     self.observationValues = @[@"At risk of harm", @"Under the influence", @"Anxious", @"Depressed", @"Aggravated", @"Threatening"];
 
     self.rootElement = [[QRootElement alloc] init];
