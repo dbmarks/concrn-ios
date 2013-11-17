@@ -35,7 +35,7 @@
 - (void)updateResponder:(NSDictionary*)updates
               onSuccess:(SuccessBlock)success
               onFailure:(FailureBlock)failure {
-    NSString *phone = [[NSUserDefaults standardUserDefaults] valueForKey: UserPhoneNumberKey];
+    NSString *phone = [[NSUserDefaults standardUserDefaults] valueForKey:UserPhoneNumberKey];
     NSString *url = [NSString stringWithFormat:@"/responders/%@", phone];
 
     [self.manager PATCH:url

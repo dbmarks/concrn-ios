@@ -1,5 +1,6 @@
 #import "UpdateCrisisViewController.h"
 #import <QuickDialog/QuickDialog.h>
+#import <QuartzCore/QuartzCore.h>
 #import "HTTPClient.h"
 
 @interface UpdateCrisisViewController ()
@@ -34,7 +35,11 @@
     [super viewDidLoad];
 
     self.navigationItem.title = @"Street Mom";
-    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:117/255.0 green:31/255.0 blue:214/255.0 alpha:1];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:277/255.0 green:107/255.0 blue:110/255.0 alpha:1];
+
+    self.updateCrisisButton.clipsToBounds = YES;
+    self.updateCrisisButton.layer.cornerRadius = 3;
 
     self.genderValues = @[@"Male", @"Female", @"Other"];
     self.ageValues = @[@"Youth (0-17)", @"Young Adult (18-34)", @"Adult (35-64)", @"Senior (65+)"];

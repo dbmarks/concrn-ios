@@ -1,4 +1,5 @@
 #import "UserInfoViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface UserInfoViewController ()
 
@@ -8,6 +9,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.continueButton.clipsToBounds = YES;
+    self.continueButton.layer.cornerRadius = 3;
 }
 
 #pragma mark - Action
@@ -16,7 +20,6 @@
     [[NSUserDefaults standardUserDefaults] setObject:@(YES) forKey:UserEnteredUserInfoKey];
     [[NSUserDefaults standardUserDefaults] setObject:self.nameTextField.text forKey:UserNameKey];
     [[NSUserDefaults standardUserDefaults] setObject:self.phoneNumberTextField.text forKey:UserPhoneNumberKey];
-   
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

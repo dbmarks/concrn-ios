@@ -3,6 +3,7 @@
 #import "UpdateCrisisViewController.h"
 #import "UserInfoViewController.h"
 #import "ProfileViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ReportCrisisViewController ()
 
@@ -25,8 +26,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationItem.title = @"Street Mom";
-    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"streetmom_logo_small"]];
+    self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:117/255.0 green:31/255.0 blue:214/255.0 alpha:1];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:277/255.0 green:107/255.0 blue:110/255.0 alpha:1];
 
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
@@ -36,11 +38,14 @@
 
     self.pinImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pin"]];
 
+    self.reportCrisisButton.clipsToBounds = YES;
+    self.reportCrisisButton.layer.cornerRadius = 3;
+
     UIBarButtonItem *nineOneOneButton = [[UIBarButtonItem alloc] initWithTitle:@"911"
                                                                          style:UIBarButtonItemStyleDone
                                                                         target:self
                                                                         action:@selector(didTapCall911:)];
-    
+
     [[NSNotificationCenter defaultCenter] addObserverForName:UserAvailabilityKey
                                                       object:nil
                                                        queue:[NSOperationQueue mainQueue]

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5C99679A18385B5100D5CDDE /* libQuickDialog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C99679718385B1F00D5CDDE /* libQuickDialog.a */; };
 		5C99679D183865A300D5CDDE /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C99679C183865A300D5CDDE /* SurveyViewController.m */; };
+		5C9967A818395D9000D5CDDE /* streetmom_logo_small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967A618395D9000D5CDDE /* streetmom_logo_small@2x.png */; };
+		5C9967A918395D9000D5CDDE /* streetmom_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967A718395D9000D5CDDE /* streetmom_logo@2x.png */; };
+		5C9967AB18395E3D00D5CDDE /* button_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967AA18395E3D00D5CDDE /* button_background@2x.png */; };
 		5CB0D2F21837FC44006230DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB0D2F11837FC44006230DA /* CoreLocation.framework */; };
 		5CB0D2F418380437006230DA /* ReportCrisisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */; };
 		5CB0D2F918380B92006230DA /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F818380B92006230DA /* HTTPClient.m */; };
@@ -68,6 +71,9 @@
 		5C99678F18385B1F00D5CDDE /* QuickDialog.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QuickDialog.xcodeproj; path = Vendor/QuickDialog/QuickDialog.xcodeproj; sourceTree = "<group>"; };
 		5C99679B183865A300D5CDDE /* SurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurveyViewController.h; sourceTree = "<group>"; };
 		5C99679C183865A300D5CDDE /* SurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurveyViewController.m; sourceTree = "<group>"; };
+		5C9967A618395D9000D5CDDE /* streetmom_logo_small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "streetmom_logo_small@2x.png"; sourceTree = "<group>"; };
+		5C9967A718395D9000D5CDDE /* streetmom_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "streetmom_logo@2x.png"; sourceTree = "<group>"; };
+		5C9967AA18395E3D00D5CDDE /* button_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_background@2x.png"; sourceTree = "<group>"; };
 		5CB0D2F11837FC44006230DA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportCrisisViewController.xib; sourceTree = "<group>"; };
 		5CB0D2F718380B92006230DA /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
@@ -193,7 +199,10 @@
 			isa = PBXGroup;
 			children = (
 				5CB0D330183830BE006230DA /* background@2x.jpg */,
+				5C9967AA18395E3D00D5CDDE /* button_background@2x.png */,
 				5CB0D331183830BE006230DA /* pin@2x.png */,
+				5C9967A718395D9000D5CDDE /* streetmom_logo@2x.png */,
+				5C9967A618395D9000D5CDDE /* streetmom_logo_small@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -355,9 +364,12 @@
 				F17756B7183940B90017C9E0 /* ProfileViewController.xib in Resources */,
 				5CB0D3261838252F006230DA /* UpdateCrisisViewController.xib in Resources */,
 				5CB0D32D18382F44006230DA /* UserInfoViewController.xib in Resources */,
+				5C9967AB18395E3D00D5CDDE /* button_background@2x.png in Resources */,
 				5CC5DD531837EE74009B768D /* InfoPlist.strings in Resources */,
+				5C9967A818395D9000D5CDDE /* streetmom_logo_small@2x.png in Resources */,
 				5CB0D332183830BE006230DA /* background@2x.jpg in Resources */,
 				5CC5DD5B1837EE74009B768D /* Images.xcassets in Resources */,
+				5C9967A918395D9000D5CDDE /* streetmom_logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

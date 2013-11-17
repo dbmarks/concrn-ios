@@ -28,11 +28,12 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hJf-X5-hYj">
                             <rect key="frame" x="20" y="22" width="280" height="45"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                            <state key="normal" title="Update Crisis">
+                            <size key="titleShadowOffset" width="1" height="1"/>
+                            <state key="normal" title="Update Crisis" backgroundImage="button_background.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
                                 <action selector="didTapUpdateCrisisButton:" destination="-1" eventType="touchUpInside" id="qJf-tJ-aeE"/>
@@ -64,5 +65,6 @@
     </objects>
     <resources>
         <image name="background.jpg" width="320" height="568"/>
+        <image name="button_background.png" width="2" height="2"/>
     </resources>
 </document>
