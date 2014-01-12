@@ -3,19 +3,19 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "streetmom-app-icon58@2x.png",
-      "scale" : "2x"
-    },
-    {
-      "size" : "60x60",
-      "idiom" : "iphone",
-      "filename" : "streetmom-app-icon120@2x.png",
+      "filename" : "concrn-app-icon-58@2x.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "streetmom-app-icon80@2x.png",
+      "filename" : "concrn-app-icon-80@2x.png.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "concrn-app-icon-120@2x.png",
       "scale" : "2x"
     }
   ],

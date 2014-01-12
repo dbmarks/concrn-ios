@@ -22,6 +22,7 @@
 
 - (instancetype)initWithHTTPClient:(HTTPClient *)httpClient {
     self = [super initWithNibName:nil bundle:nil];
+    
     if (self) {
         self.geocoder = [[CLGeocoder alloc] init];
         self.httpClient = httpClient;
@@ -32,7 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"streetmom_logo_small"]];
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"concrn_logo_small"]];
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:277/255.0 green:107/255.0 blue:110/255.0 alpha:1];
 
     self.locationManager = [[CLLocationManager alloc] init];

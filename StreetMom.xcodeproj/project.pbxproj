@@ -9,12 +9,6 @@
 /* Begin PBXBuildFile section */
 		5C99679A18385B5100D5CDDE /* libQuickDialog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C99679718385B1F00D5CDDE /* libQuickDialog.a */; };
 		5C99679D183865A300D5CDDE /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C99679C183865A300D5CDDE /* SurveyViewController.m */; };
-		5C9967A818395D9000D5CDDE /* streetmom_logo_small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967A618395D9000D5CDDE /* streetmom_logo_small@2x.png */; };
-		5C9967A918395D9000D5CDDE /* streetmom_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967A718395D9000D5CDDE /* streetmom_logo@2x.png */; };
-		5C9967AB18395E3D00D5CDDE /* button_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967AA18395E3D00D5CDDE /* button_background@2x.png */; };
-		5C9967B71839648300D5CDDE /* streetmom-app-icon58@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967B41839648300D5CDDE /* streetmom-app-icon58@2x.png */; };
-		5C9967B81839648300D5CDDE /* streetmom-app-icon80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967B51839648300D5CDDE /* streetmom-app-icon80@2x.png */; };
-		5C9967B91839648300D5CDDE /* streetmom-app-icon120@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967B61839648300D5CDDE /* streetmom-app-icon120@2x.png */; };
 		5C9967BB183965E000D5CDDE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967BA183965E000D5CDDE /* Images.xcassets */; };
 		5C9967BD183969F300D5CDDE /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C9967BC183969F300D5CDDE /* AddressBookUI.framework */; };
 		5C9967C0183972A500D5CDDE /* center_location_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967BF183972A500D5CDDE /* center_location_button@2x.png */; };
@@ -46,6 +40,9 @@
 		5CC5DD7D1837F12D009B768D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD7C1837F12D009B768D /* MapKit.framework */; };
 		F17756B6183940B90017C9E0 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17756B4183940B90017C9E0 /* ProfileViewController.m */; };
 		F17756B7183940B90017C9E0 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F17756B5183940B90017C9E0 /* ProfileViewController.xib */; };
+		F1FA3143185BEC11001D296E /* concrn_logo_small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1FA3141185BEC11001D296E /* concrn_logo_small@2x.png */; };
+		F1FA3144185BEC11001D296E /* concrn_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1FA3142185BEC11001D296E /* concrn_logo@2x.png */; };
+		F1FA3146185BEEE6001D296E /* button_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1FA3145185BEEE6001D296E /* button_background@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,12 +73,6 @@
 		5C99678F18385B1F00D5CDDE /* QuickDialog.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QuickDialog.xcodeproj; path = Vendor/QuickDialog/QuickDialog.xcodeproj; sourceTree = "<group>"; };
 		5C99679B183865A300D5CDDE /* SurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurveyViewController.h; sourceTree = "<group>"; };
 		5C99679C183865A300D5CDDE /* SurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurveyViewController.m; sourceTree = "<group>"; };
-		5C9967A618395D9000D5CDDE /* streetmom_logo_small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "streetmom_logo_small@2x.png"; sourceTree = "<group>"; };
-		5C9967A718395D9000D5CDDE /* streetmom_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "streetmom_logo@2x.png"; sourceTree = "<group>"; };
-		5C9967AA18395E3D00D5CDDE /* button_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_background@2x.png"; sourceTree = "<group>"; };
-		5C9967B41839648300D5CDDE /* streetmom-app-icon58@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "streetmom-app-icon58@2x.png"; sourceTree = SOURCE_ROOT; };
-		5C9967B51839648300D5CDDE /* streetmom-app-icon80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "streetmom-app-icon80@2x.png"; sourceTree = SOURCE_ROOT; };
-		5C9967B61839648300D5CDDE /* streetmom-app-icon120@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "streetmom-app-icon120@2x.png"; sourceTree = SOURCE_ROOT; };
 		5C9967BA183965E000D5CDDE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5C9967BC183969F300D5CDDE /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		5C9967BF183972A500D5CDDE /* center_location_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "center_location_button@2x.png"; sourceTree = "<group>"; };
@@ -133,6 +124,9 @@
 		F17756B3183940B90017C9E0 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		F17756B4183940B90017C9E0 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		F17756B5183940B90017C9E0 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		F1FA3141185BEC11001D296E /* concrn_logo_small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "concrn_logo_small@2x.png"; sourceTree = "<group>"; };
+		F1FA3142185BEC11001D296E /* concrn_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "concrn_logo@2x.png"; sourceTree = "<group>"; };
+		F1FA3145185BEEE6001D296E /* button_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_background@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,14 +204,11 @@
 			isa = PBXGroup;
 			children = (
 				5CB0D330183830BE006230DA /* background@2x.jpg */,
-				5C9967AA18395E3D00D5CDDE /* button_background@2x.png */,
 				5C9967BF183972A500D5CDDE /* center_location_button@2x.png */,
+				F1FA3145185BEEE6001D296E /* button_background@2x.png */,
+				F1FA3141185BEC11001D296E /* concrn_logo_small@2x.png */,
+				F1FA3142185BEC11001D296E /* concrn_logo@2x.png */,
 				5CB0D331183830BE006230DA /* pin@2x.png */,
-				5C9967B61839648300D5CDDE /* streetmom-app-icon120@2x.png */,
-				5C9967B41839648300D5CDDE /* streetmom-app-icon58@2x.png */,
-				5C9967B51839648300D5CDDE /* streetmom-app-icon80@2x.png */,
-				5C9967A718395D9000D5CDDE /* streetmom_logo@2x.png */,
-				5C9967A618395D9000D5CDDE /* streetmom_logo_small@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -303,9 +294,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5CC5DD441837EE74009B768D /* StreetMom */ = {
+		5CC5DD441837EE74009B768D /* Concrn */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5CC5DD711837EE75009B768D /* Build configuration list for PBXNativeTarget "StreetMom" */;
+			buildConfigurationList = 5CC5DD711837EE75009B768D /* Build configuration list for PBXNativeTarget "Concrn" */;
 			buildPhases = (
 				5CC5DD411837EE74009B768D /* Sources */,
 				5CC5DD421837EE74009B768D /* Frameworks */,
@@ -316,7 +307,7 @@
 			dependencies = (
 				5C99679918385B4B00D5CDDE /* PBXTargetDependency */,
 			);
-			name = StreetMom;
+			name = Concrn;
 			productName = StreetMom;
 			productReference = 5CC5DD451837EE74009B768D /* StreetMom.app */;
 			productType = "com.apple.product-type.application";
@@ -353,7 +344,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				5CC5DD441837EE74009B768D /* StreetMom */,
+				5CC5DD441837EE74009B768D /* Concrn */,
 			);
 		};
 /* End PBXProject section */
@@ -380,21 +371,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C9967B81839648300D5CDDE /* streetmom-app-icon80@2x.png in Resources */,
+				F1FA3143185BEC11001D296E /* concrn_logo_small@2x.png in Resources */,
 				5CB0D334183830BE006230DA /* pin@2x.png in Resources */,
+				F1FA3144185BEC11001D296E /* concrn_logo@2x.png in Resources */,
 				5C9967C0183972A500D5CDDE /* center_location_button@2x.png in Resources */,
+				F1FA3146185BEEE6001D296E /* button_background@2x.png in Resources */,
 				5CB0D2F418380437006230DA /* ReportCrisisViewController.xib in Resources */,
-				5C9967B91839648300D5CDDE /* streetmom-app-icon120@2x.png in Resources */,
 				F17756B7183940B90017C9E0 /* ProfileViewController.xib in Resources */,
 				5CB0D3261838252F006230DA /* UpdateCrisisViewController.xib in Resources */,
 				5CB0D32D18382F44006230DA /* UserInfoViewController.xib in Resources */,
-				5C9967AB18395E3D00D5CDDE /* button_background@2x.png in Resources */,
 				5CC5DD531837EE74009B768D /* InfoPlist.strings in Resources */,
 				5C9967BB183965E000D5CDDE /* Images.xcassets in Resources */,
-				5C9967A818395D9000D5CDDE /* streetmom_logo_small@2x.png in Resources */,
-				5C9967B71839648300D5CDDE /* streetmom-app-icon58@2x.png in Resources */,
 				5CB0D332183830BE006230DA /* background@2x.jpg in Resources */,
-				5C9967A918395D9000D5CDDE /* streetmom_logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,7 +571,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5CC5DD711837EE75009B768D /* Build configuration list for PBXNativeTarget "StreetMom" */ = {
+		5CC5DD711837EE75009B768D /* Build configuration list for PBXNativeTarget "Concrn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5CC5DD721837EE75009B768D /* Debug */,

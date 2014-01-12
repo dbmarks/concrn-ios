@@ -34,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationItem.title = @"Street Mom";
+    self.navigationItem.title = @"Report Crisis";
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:277/255.0 green:107/255.0 blue:110/255.0 alpha:1];
 
     self.updateCrisisButton.clipsToBounds = YES;
