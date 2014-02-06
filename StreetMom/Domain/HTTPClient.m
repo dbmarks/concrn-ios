@@ -13,7 +13,7 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.streetmom.com"]];
+        self.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://www.concrn.com"]];
         self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
         self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
     }
@@ -81,19 +81,39 @@
 
 - (void)updateCrisisWithReportID:(NSInteger)reportID
                           params:(NSDictionary *)params
+                           image:(NSData*)image
                        onSuccess:(SuccessBlock)success
                          failure:(FailureBlock)failure {
-    NSDictionary *postParams = @{@"report": params};
-    NSString *path = [NSString stringWithFormat:@"/reports/%ld", (long)reportID];
+    NSString *path;
+    NSMutableDictionary *postParams = @{@"report": params};
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postParams
+                                                       options:NSJSONWritingPrettyPrinted
+                                                         error:&error];
+    NSString* json = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    
+    if (image) {
+        path = [NSString stringWithFormat:@"/reports/%ld/upload", (long)reportID];
 
-    [self.manager PATCH:path
-             parameters:postParams
-                success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                    success(responseObject);
-                }
-                failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                    failure(error);
-                }];
+        [self.manager POST:path parameters:postParams constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+            [formData appendPartWithFileData:image name:@"report[image]" fileName:@"image.jpg" mimeType:@"image/jpeg"];
+        } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            success(responseObject);
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            failure(error);
+        }];
+    } else {
+        path = [NSString stringWithFormat:@"/reports/%ld", (long)reportID];
+
+        [self.manager PATCH:path
+                 parameters:postParams
+                    success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                        success(responseObject);
+                    }
+                    failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                        failure(error);
+                    }];
+    }
 }
 
 @end

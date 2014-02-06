@@ -107,7 +107,7 @@
 		5CB0D32A18382F44006230DA /* UserInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserInfoViewController.xib; sourceTree = "<group>"; };
 		5CB0D330183830BE006230DA /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
 		5CB0D331183830BE006230DA /* pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin@2x.png"; sourceTree = "<group>"; };
-		5CC5DD451837EE74009B768D /* StreetMom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreetMom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC5DD451837EE74009B768D /* Concrn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concrn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC5DD481837EE74009B768D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5CC5DD4A1837EE74009B768D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5CC5DD4C1837EE74009B768D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -227,7 +227,7 @@
 		5CC5DD461837EE74009B768D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5CC5DD451837EE74009B768D /* StreetMom.app */,
+				5CC5DD451837EE74009B768D /* Concrn.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 			);
 			name = Concrn;
 			productName = StreetMom;
-			productReference = 5CC5DD451837EE74009B768D /* StreetMom.app */;
+			productReference = 5CC5DD451837EE74009B768D /* Concrn.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

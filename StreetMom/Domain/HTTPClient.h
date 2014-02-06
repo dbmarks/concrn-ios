@@ -24,6 +24,7 @@ typedef void(^FailureBlock)(NSError *error);
 
 - (void)updateCrisisWithReportID:(NSInteger)reportID
                           params:(NSDictionary *)params
+                           image:(NSData*)data
                        onSuccess:(SuccessBlock)success
                          failure:(FailureBlock)failure;
 

@@ -76,10 +76,13 @@
     settingElement.title = @"Crisis Setting";
     settingElement.items = self.settingValues;
 
+
+
     [patientDescriptionSection addElement:genderElement];
     [patientDescriptionSection addElement:ageElement];
     [patientDescriptionSection addElement:raceElement];
     [patientDescriptionSection addElement:settingElement];
+
 
     self.observationSection = [[QSelectSection alloc] init];
     self.observationSection.title = @"Crisis Observations: Is the patient...";
@@ -89,8 +92,15 @@
     QSection *additionalDescriptionSection = [[QSection alloc] initWithTitle:@"Additional Description..."];
     QEntryElement *additionalDescription = [[QEntryElement alloc] initWithKey:@"nature"];
     additionalDescription.placeholder = @"Write additional important information here.";
-    [additionalDescriptionSection addElement:additionalDescription];
+    QImageElement *imageElement = [[QImageElement alloc] initWithKey:@"image"];
+    imageElement.title = @"Incident Picture";
+    imageElement.source = UIImagePickerControllerSourceTypeCamera;
+    imageElement.imageMaxLength = 640;
+    
+    [additionalDescriptionSection addElement:imageElement];
 
+    [additionalDescriptionSection addElement:additionalDescription];
+    
     [self.rootElement addSection:patientDescriptionSection];
     [self.rootElement addSection:self.observationSection];
     [self.rootElement addSection:additionalDescriptionSection];
@@ -145,6 +155,12 @@
 - (void)updateCrisis {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [self.rootElement fetchValueIntoObject:params];
+    NSData* imageData;
+    if (params[@"image"]) {
+        imageData = UIImageJPEGRepresentation(params[@"image"], 0.75);
+        [params removeObjectForKey:@"image"];
+    }
+    
     params[@"gender"] = self.genderValues[[params[@"gender"] intValue]];
     params[@"age"] = self.ageValues[[params[@"age"] intValue]];
     params[@"race"] = self.raceValues[[params[@"race"] intValue]];
@@ -153,6 +169,7 @@
 
     [self.httpClient updateCrisisWithReportID:self.reportID
                                        params:params
+                                        image:imageData
                                     onSuccess:^(id object) {
                                         self.updateCrisisButton.enabled = YES;
                                         [self.spinner stopAnimating];
