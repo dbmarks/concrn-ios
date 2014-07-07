@@ -38,8 +38,6 @@
 		5CC5DD591837EE74009B768D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD581837EE74009B768D /* AppDelegate.m */; };
 		5CC5DD7A1837F0E4009B768D /* ReportCrisisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */; };
 		5CC5DD7D1837F12D009B768D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD7C1837F12D009B768D /* MapKit.framework */; };
-		F17756B6183940B90017C9E0 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F17756B4183940B90017C9E0 /* ProfileViewController.m */; };
-		F17756B7183940B90017C9E0 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F17756B5183940B90017C9E0 /* ProfileViewController.xib */; };
 		F1FA3143185BEC11001D296E /* concrn_logo_small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1FA3141185BEC11001D296E /* concrn_logo_small@2x.png */; };
 		F1FA3144185BEC11001D296E /* concrn_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1FA3142185BEC11001D296E /* concrn_logo@2x.png */; };
 		F1FA3146185BEEE6001D296E /* button_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1FA3145185BEEE6001D296E /* button_background@2x.png */; };
@@ -121,9 +119,6 @@
 		5CC5DD781837F0E4009B768D /* ReportCrisisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCrisisViewController.h; sourceTree = "<group>"; };
 		5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCrisisViewController.m; sourceTree = "<group>"; };
 		5CC5DD7C1837F12D009B768D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		F17756B3183940B90017C9E0 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
-		F17756B4183940B90017C9E0 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
-		F17756B5183940B90017C9E0 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		F1FA3141185BEC11001D296E /* concrn_logo_small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "concrn_logo_small@2x.png"; sourceTree = "<group>"; };
 		F1FA3142185BEC11001D296E /* concrn_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "concrn_logo@2x.png"; sourceTree = "<group>"; };
 		F1FA3145185BEEE6001D296E /* button_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_background@2x.png"; sourceTree = "<group>"; };
@@ -273,9 +268,6 @@
 		5CC5DD771837F094009B768D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F17756B3183940B90017C9E0 /* ProfileViewController.h */,
-				F17756B4183940B90017C9E0 /* ProfileViewController.m */,
-				F17756B5183940B90017C9E0 /* ProfileViewController.xib */,
 				5CC5DD781837F0E4009B768D /* ReportCrisisViewController.h */,
 				5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */,
 				5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */,
@@ -377,7 +369,6 @@
 				5C9967C0183972A500D5CDDE /* center_location_button@2x.png in Resources */,
 				F1FA3146185BEEE6001D296E /* button_background@2x.png in Resources */,
 				5CB0D2F418380437006230DA /* ReportCrisisViewController.xib in Resources */,
-				F17756B7183940B90017C9E0 /* ProfileViewController.xib in Resources */,
 				5CB0D3261838252F006230DA /* UpdateCrisisViewController.xib in Resources */,
 				5CB0D32D18382F44006230DA /* UserInfoViewController.xib in Resources */,
 				5CC5DD531837EE74009B768D /* InfoPlist.strings in Resources */,
@@ -402,7 +393,6 @@
 				5CB0D31918381AE4006230DA /* AFURLConnectionOperation.m in Sources */,
 				5CB0D30F18381AE4006230DA /* AFHTTPRequestOperation.m in Sources */,
 				5CB0D2F918380B92006230DA /* HTTPClient.m in Sources */,
-				F17756B6183940B90017C9E0 /* ProfileViewController.m in Sources */,
 				5CB0D31B18381AE4006230DA /* AFURLRequestSerialization.m in Sources */,
 				5CB0D31318381AE4006230DA /* AFHTTPSessionManager.m in Sources */,
 				5CB0D31518381AE4006230DA /* AFNetworkReachabilityManager.m in Sources */,
