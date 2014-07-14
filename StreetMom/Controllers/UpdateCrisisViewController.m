@@ -34,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationItem.title = @"Report Crisis";
+    self.navigationItem.title = @"Create Report";
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:277/255.0 green:107/255.0 blue:110/255.0 alpha:1];
 
     self.updateCrisisButton.clipsToBounds = YES;
@@ -54,7 +54,7 @@
 
     self.rootElement = [[QRootElement alloc] init];
 
-    QSection *patientDescriptionSection = [[QSection alloc] initWithTitle:@"Patient Description"];
+    QSection *patientDescriptionSection = [[QSection alloc] initWithTitle:@"Description"];
 
     QRadioElement *genderElement = [[QRadioElement alloc] initWithKey:@"gender"];
     genderElement.selected = -1;
@@ -73,7 +73,7 @@
 
     QRadioElement *settingElement = [[QRadioElement alloc] initWithKey:@"setting"];
     settingElement.selected = -1;
-    settingElement.title = @"Crisis Setting";
+    settingElement.title = @"Setting";
     settingElement.items = self.settingValues;
 
 
@@ -85,13 +85,13 @@
 
 
     self.observationSection = [[QSelectSection alloc] init];
-    self.observationSection.title = @"Crisis Observations: Is the patient...";
+    self.observationSection.title = @"Incident Observations: The person is...";
     self.observationSection.multipleAllowed = YES;
     self.observationSection.items = self.observationValues;
 
     QSection *additionalDescriptionSection = [[QSection alloc] initWithTitle:@"Additional Description..."];
     QEntryElement *additionalDescription = [[QEntryElement alloc] initWithKey:@"nature"];
-    additionalDescription.placeholder = @"Write additional important information here.";
+    additionalDescription.placeholder = @"Add important information here.";
     QImageElement *imageElement = [[QImageElement alloc] initWithKey:@"image"];
     imageElement.title = @"Incident Picture";
     imageElement.source = UIImagePickerControllerSourceTypeCamera;
