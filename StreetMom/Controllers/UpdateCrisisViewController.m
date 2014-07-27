@@ -16,6 +16,7 @@
 @property (nonatomic) NSArray *raceValues;
 @property (nonatomic) NSArray *settingValues;
 @property (nonatomic) NSArray *observationValues;
+//@property (nonatomic) NSArray *urgencyValues;
 
 @end
 
@@ -116,7 +117,21 @@
     self.rootElement = [[QRootElement alloc] init];
  
     
-    QSection *additionalDescriptionSection = [[QSection alloc] initWithTitle:@"Additional Description..."];
+    QSection *additionalDescriptionSection = [[QSection alloc] initWithTitle:@"Report Information"];
+//
+//    self.urgencyValues = @[@"1 - Not urgent", @"2 - This week", @"3 - Today", @"4 - Within an hour",
+//        @"5 - Need help now"];
+//    QRadioElement *urgencyElement = [[QRadioElement alloc] initWithKey:@"urgency"];
+//    urgencyElement.selected = -1;
+//    urgencyElement.title = @"Urgency";
+//    urgencyElement.items = self.urgencyValues;
+//    if didTapUrgencyElement.@"5 - Need help now":
+//        [[[UIAlertView alloc] initWithTitle:[@"Urgent Emergency"]
+//                               message:@"Please be advised: if you are currently witnessing or experiencing violence or a medical emergency do not hesitate to dial 911."
+//                             delegate:nil
+//                   acceptButtonTitle:@"OK"
+//                    otherButtonTitles:nineOneOneButton] show];
+//    
     QEntryElement *additionalDescription = [[QEntryElement alloc] initWithKey:@"nature"];
     additionalDescription.placeholder = @"Add important information here.";
     QImageElement *imageElement = [[QImageElement alloc] initWithKey:@"image"];
@@ -166,6 +181,16 @@
     self.updateCrisisButton.enabled = NO;
     [self.spinner startAnimating];
     [self updateCrisis];
+//    
+//    [[[UIAlertView alloc] initWithTitle:[@"Report Updated"]
+//            if agency.zip_code.match:
+//                                message:@"Thank you for reporting your concrn. The {agency.name} will respond as soon as possible."
+//                                else:
+//                                message:@"Thank you for reporting your concrn. Each report pulls Concrn closer to active service in your community. Tell your friends!"
+//                               delegate:nil
+//                      acceptButtonTitle:@"OK"
+//                      otherButtonTitles:nil] show];
+//    
 }
 
 #pragma mark - <UIAlertViewDelegate>

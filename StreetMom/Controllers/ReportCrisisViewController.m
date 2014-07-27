@@ -97,6 +97,16 @@
     self.reportCrisisButton.enabled = NO;
     [self.spinner startAnimating];
     [self reportCrisis];
+//    
+//    [[[UIAlertView alloc] initWithTitle:[@"Report Received"]
+//            if agency.zip_code.match:
+//                                message:@"Your report has been received by the {agency.name}. Please update it with detailed information."
+//                                else:
+//                                message:@"There isn't a concrned agency in your area yet. Please submit a detailed report and help Concrn bring compassionate response to your community."
+//                               delegate:nil
+//                      acceptButtonTitle:@"OK"
+//                      otherButtonTitles:nil] show];
+//    
 }
 
 - (IBAction)didTapCenterLocationButton:(id)sender {
