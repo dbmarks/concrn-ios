@@ -32,13 +32,8 @@
 }
 
 -(void)setPersonState:(id)sender {
-    if ([self.isPersonSwitch isOn]) {
-        [self.quickDialogController showSectionsWithAnimation:UITableViewRowAnimationFade sections:@[self.patientDescriptionSection, self.observationSection]];
-    } else {
-        [self.quickDialogController hideSectionsWithAnimation:UITableViewRowAnimationFade sections:@[self.patientDescriptionSection, self.observationSection]];
-
-    }
-    
+    self.patientDescriptionSection.hidden = ![self.isPersonSwitch isOn];
+        [self.quickDialogController.quickDialogTableView reloadData];
 }
 
 
@@ -86,6 +81,8 @@
     [patientDescriptionSection addElement:ageElement];
     [patientDescriptionSection addElement:raceElement];
     [patientDescriptionSection addElement:settingElement];
+    patientDescriptionSection.hidden = YES;
+    
     return _patientDescriptionSection = patientDescriptionSection;
 }
 
@@ -127,7 +124,6 @@
     [additionalDescriptionSection addElement:imageElement];
     
     [additionalDescriptionSection addElement:additionalDescription];
-    
     [self.rootElement addSection:self.patientDescriptionSection];
     [self.rootElement addSection:self.observationSection];
     [self.rootElement addSection:additionalDescriptionSection];
