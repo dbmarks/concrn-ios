@@ -32,7 +32,10 @@
 }
 
 -(void)setPersonState:(id)sender {
-    self.patientDescriptionSection.hidden = ![self.isPersonSwitch isOn];
+    BOOL hidden = ![self.isPersonSwitch isOn];
+    self.patientDescriptionSection.hidden = hidden;
+    self.observationSection.hidden = hidden;
+    
         [self.quickDialogController.quickDialogTableView reloadData];
 }
 
@@ -96,6 +99,7 @@
     _observationSection.title = @"Incident Observations: The person is...";
     _observationSection.multipleAllowed = YES;
     _observationSection.items = self.observationValues;
+    _observationSection.hidden = YES;
     return _observationSection;
 }
 
