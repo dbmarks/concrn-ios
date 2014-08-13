@@ -119,20 +119,16 @@
  
     
     QSection *additionalDescriptionSection = [[QSection alloc] initWithTitle:@"Report Information"];
-//
-//    self.urgencyValues = @[@"1 - Not urgent", @"2 - This week", @"3 - Today", @"4 - Within an hour",
-//        @"5 - Need help now"];
-//    QRadioElement *urgencyElement = [[QRadioElement alloc] initWithKey:@"urgency"];
-//    urgencyElement.selected = -1;
-//    urgencyElement.title = @"Urgency";
-//    urgencyElement.items = self.urgencyValues;
-//    if didTapUrgencyElement.@"5 - Need help now":
-//        [[[UIAlertView alloc] initWithTitle:[@"Urgent Emergency"]
-//                               message:@"Please be advised: if you are currently witnessing or experiencing violence or a medical emergency do not hesitate to dial 911."
-//                             delegate:nil
-//                   acceptButtonTitle:@"OK"
-//                    otherButtonTitles:nineOneOneButton] show];
-//    
+
+    QSection *incidentDetailsSection = [[QSection alloc] initWithTitle:@"Report Information"];
+
+    NSArray* urgencyValues = @[@"1 - Not urgent", @"2 - This week", @"3 - Today", @"4 - Within an hour",
+        @"5 - Need help now"];
+    QRadioElement *urgencyElement = [[QRadioElement alloc] initWithKey:@"urgency"];
+    urgencyElement.title = @"Urgency";
+    urgencyElement.items = urgencyValues;
+    [incidentDetailsSection addElement:urgencyElement];
+
     QEntryElement *additionalDescription = [[QEntryElement alloc] initWithKey:@"nature"];
     additionalDescription.placeholder = @"Add important information here.";
     QImageElement *imageElement = [[QImageElement alloc] initWithKey:@"image"];
@@ -143,6 +139,7 @@
     [additionalDescriptionSection addElement:imageElement];
     
     [additionalDescriptionSection addElement:additionalDescription];
+    [self.rootElement addSection:incidentDetailsSection];
     [self.rootElement addSection:self.patientDescriptionSection];
     [self.rootElement addSection:self.observationSection];
     [self.rootElement addSection:additionalDescriptionSection];
@@ -207,6 +204,10 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [self.rootElement fetchValueIntoObject:params];
     NSData* imageData;
+    if (params[@"urgency"]) {
+        params[@"urgency"] = [NSNumber numberWithInt:([params[@"urgency"] intValue] + 1)];
+    }
+    
     if (params[@"image"]) {
         imageData = UIImageJPEGRepresentation(params[@"image"], 0.75);
         [params removeObjectForKey:@"image"];
@@ -219,6 +220,15 @@
         params[@"setting"] = self.settingValues[[params[@"setting"] intValue]];
         params[@"observations"] = [self.observationSection.selectedItems componentsJoinedByString:@", "];
     }
+
+    if (params[@"urgency"] == @4) {
+        [[[UIAlertView alloc] initWithTitle:@"Warning"
+                                    message:@"if you are witnessing or experiencing violence or a medical emergency do not hesitate to dial 911. "
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil] show];
+    }
+    
 
     [self.httpClient updateCrisisWithReportID:self.reportID
                                        params:params
