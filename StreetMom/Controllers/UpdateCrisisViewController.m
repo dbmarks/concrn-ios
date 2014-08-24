@@ -4,7 +4,7 @@
 
 @interface UpdateCrisisViewController ()
 
-@property (nonatomic, assign) NSInteger reportID;
+@property (nonatomic) NSDictionary* reportData;
 @property (nonatomic) HTTPClient *httpClient;
 @property (nonatomic) NSArray *cellTitles;
 @property (nonatomic) QuickDialogController *quickDialogController;
@@ -22,11 +22,12 @@
 
 @implementation UpdateCrisisViewController
 
-- (instancetype)initWithReportID:(NSInteger)reportID
-                      httpClient:(HTTPClient *)httpClient {
+- (instancetype)initWithReportData:(NSDictionary *)reportData
+                        httpClient:(HTTPClient *)httpClient {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
-        self.reportID = reportID;
+    
+        self.reportData = reportData;
         self.httpClient = httpClient;
     }
     return self;
@@ -107,7 +108,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationItem.title = @"Create Report";
+    if ([self isDefaultAgency]) {
+        self.navigationItem.title = @"Create Report";
+    } else {
+        self.navigationItem.title = [NSString stringWithFormat:@"Report To: %@", self.agencyData[@"name"]];
+    }
+    
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:277/255.0 green:107/255.0 blue:110/255.0 alpha:1];
 
     self.updateCrisisButton.clipsToBounds = YES;
@@ -193,6 +199,22 @@
 //    
 }
 
+- (BOOL)isDefaultAgency {
+    id defaultValue = self.agencyData[@"default"];
+    if (defaultValue == [NSNull null]) {
+        return true;
+    } else {
+        return [defaultValue boolValue];
+    }
+}
+- (NSInteger)reportID {
+    return [self.reportData[@"id"] integerValue];
+}
+
+- (NSDictionary*)agencyData {
+    return self.reportData[@"agency"];
+}
+
 #pragma mark - <UIAlertViewDelegate>
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -202,7 +224,29 @@
 }
 
 #pragma mark - Private
-
+- (void)handleSuccessfulUpdate {
+    [self closeUpdateForm];
+    NSString* message;
+    
+    if ([self isDefaultAgency]) {
+       message = @"Thank you for reporting your concrn. Each report pulls Concrn closer to active service in your community. Tell your friends!";
+    } else {
+        message  = [NSString stringWithFormat:@"Thank you for reporting your concrn. %@ will respond as soon as possible.", self.agencyData[@"name"]];
+ 
+    }
+    
+    [[[UIAlertView alloc] initWithTitle:@"Success"
+                                message:message
+                               delegate:nil
+                      cancelButtonTitle:@"OK"
+                      otherButtonTitles:nil] show];
+}
+- (void)closeUpdateForm
+{
+    self.updateCrisisButton.enabled = YES;
+    [self.spinner stopAnimating];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 - (void)updateCrisis {
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [self.rootElement fetchValueIntoObject:params];
@@ -219,15 +263,18 @@
         params[@"setting"] = self.settingValues[[params[@"setting"] intValue]];
         params[@"observations"] = [self.observationSection.selectedItems componentsJoinedByString:@", "];
     }
+    
+    if ([params count] == 0) {
+        [self handleSuccessfulUpdate];
+        return;
+    }
+    
 
     [self.httpClient updateCrisisWithReportID:self.reportID
                                        params:params
                                         image:imageData
                                     onSuccess:^(id object) {
-                                        self.updateCrisisButton.enabled = YES;
-                                        [self.spinner stopAnimating];
-
-                                        [self dismissViewControllerAnimated:YES completion:nil];
+                                        [self handleSuccessfulUpdate];
                                     } failure:^(NSError *error) {
                                         self.updateCrisisButton.enabled = YES;
                                         [self.spinner stopAnimating];

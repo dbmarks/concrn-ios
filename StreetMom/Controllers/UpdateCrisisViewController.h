@@ -10,6 +10,6 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (weak, nonatomic) IBOutlet UISwitch *isPersonSwitch;
 
-- (instancetype)initWithReportID:(NSInteger)reportID httpClient:(HTTPClient *)httpClient;
+- (instancetype)initWithReportData:(NSDictionary*)reportData httpClient:(HTTPClient *)httpClient;
 
 @end
