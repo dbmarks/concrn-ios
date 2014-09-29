@@ -221,7 +221,7 @@
         params[@"observations"] = [self.observationSection.selectedItems componentsJoinedByString:@", "];
     }
 
-    if (params[@"urgency"] == @4) {
+    if (params[@"urgency"] == @5) {
         [[[UIAlertView alloc] initWithTitle:@"Warning"
                                     message:@"if you are witnessing or experiencing violence or a medical emergency do not hesitate to dial 911. "
                                    delegate:nil
