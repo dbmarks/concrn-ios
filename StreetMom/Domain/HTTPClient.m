@@ -1,5 +1,5 @@
 #import "HTTPClient.h"
-#import "AFNetworking.h"
+#import <AFNetworking/AFNetworking.h>
 #import "UserInfoViewController.h"
 
 @interface HTTPClient ()

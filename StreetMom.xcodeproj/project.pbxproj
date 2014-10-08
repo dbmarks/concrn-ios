@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2844ED41AB1099C46DAA29C8 /* libPods-Concrn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC7DDA2AC545625DCC8F930 /* libPods-Concrn.a */; };
 		5C99679A18385B5100D5CDDE /* libQuickDialog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C99679718385B1F00D5CDDE /* libQuickDialog.a */; };
 		5C99679D183865A300D5CDDE /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C99679C183865A300D5CDDE /* SurveyViewController.m */; };
 		5C9967BB183965E000D5CDDE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C9967BA183965E000D5CDDE /* Images.xcassets */; };
@@ -15,15 +16,6 @@
 		5CB0D2F21837FC44006230DA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CB0D2F11837FC44006230DA /* CoreLocation.framework */; };
 		5CB0D2F418380437006230DA /* ReportCrisisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */; };
 		5CB0D2F918380B92006230DA /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D2F818380B92006230DA /* HTTPClient.m */; };
-		5CB0D30F18381AE4006230DA /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D2FD18381AE4006230DA /* AFHTTPRequestOperation.m */; };
-		5CB0D31118381AE4006230DA /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D2FF18381AE4006230DA /* AFHTTPRequestOperationManager.m */; };
-		5CB0D31318381AE4006230DA /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30118381AE4006230DA /* AFHTTPSessionManager.m */; };
-		5CB0D31518381AE4006230DA /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30418381AE4006230DA /* AFNetworkReachabilityManager.m */; };
-		5CB0D31718381AE4006230DA /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30618381AE4006230DA /* AFSecurityPolicy.m */; };
-		5CB0D31918381AE4006230DA /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30818381AE4006230DA /* AFURLConnectionOperation.m */; };
-		5CB0D31B18381AE4006230DA /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30A18381AE4006230DA /* AFURLRequestSerialization.m */; };
-		5CB0D31D18381AE4006230DA /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30C18381AE4006230DA /* AFURLResponseSerialization.m */; };
-		5CB0D31F18381AE4006230DA /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D30E18381AE4006230DA /* AFURLSessionManager.m */; };
 		5CB0D3241838252F006230DA /* UpdateCrisisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D3221838252F006230DA /* UpdateCrisisViewController.m */; };
 		5CB0D3261838252F006230DA /* UpdateCrisisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CB0D3231838252F006230DA /* UpdateCrisisViewController.xib */; };
 		5CB0D32B18382F44006230DA /* UserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB0D32918382F44006230DA /* UserInfoViewController.m */; };
@@ -38,6 +30,7 @@
 		5CC5DD591837EE74009B768D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD581837EE74009B768D /* AppDelegate.m */; };
 		5CC5DD7A1837F0E4009B768D /* ReportCrisisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */; };
 		5CC5DD7D1837F12D009B768D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC5DD7C1837F12D009B768D /* MapKit.framework */; };
+		F17BBFE719E3BDDB0032B055 /* libPods-Concrn-AFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F17BBFE619E3BDDB0032B055 /* libPods-Concrn-AFNetworking.a */; };
 		F1FA3143185BEC11001D296E /* concrn_logo_small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1FA3141185BEC11001D296E /* concrn_logo_small@2x.png */; };
 		F1FA3144185BEC11001D296E /* concrn_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1FA3142185BEC11001D296E /* concrn_logo@2x.png */; };
 		F1FA3146185BEEE6001D296E /* button_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F1FA3145185BEEE6001D296E /* button_background@2x.png */; };
@@ -68,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4EC7DDA2AC545625DCC8F930 /* libPods-Concrn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Concrn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C99678F18385B1F00D5CDDE /* QuickDialog.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QuickDialog.xcodeproj; path = Vendor/QuickDialog/QuickDialog.xcodeproj; sourceTree = "<group>"; };
 		5C99679B183865A300D5CDDE /* SurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurveyViewController.h; sourceTree = "<group>"; };
 		5C99679C183865A300D5CDDE /* SurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurveyViewController.m; sourceTree = "<group>"; };
@@ -78,25 +72,6 @@
 		5CB0D2F318380437006230DA /* ReportCrisisViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportCrisisViewController.xib; sourceTree = "<group>"; };
 		5CB0D2F718380B92006230DA /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
 		5CB0D2F818380B92006230DA /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
-		5CB0D2FC18381AE4006230DA /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
-		5CB0D2FD18381AE4006230DA /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
-		5CB0D2FE18381AE4006230DA /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
-		5CB0D2FF18381AE4006230DA /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
-		5CB0D30018381AE4006230DA /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
-		5CB0D30118381AE4006230DA /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
-		5CB0D30218381AE4006230DA /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		5CB0D30318381AE4006230DA /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		5CB0D30418381AE4006230DA /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		5CB0D30518381AE4006230DA /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
-		5CB0D30618381AE4006230DA /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
-		5CB0D30718381AE4006230DA /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
-		5CB0D30818381AE4006230DA /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
-		5CB0D30918381AE4006230DA /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
-		5CB0D30A18381AE4006230DA /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
-		5CB0D30B18381AE4006230DA /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
-		5CB0D30C18381AE4006230DA /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
-		5CB0D30D18381AE4006230DA /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
-		5CB0D30E18381AE4006230DA /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		5CB0D3211838252F006230DA /* UpdateCrisisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateCrisisViewController.h; sourceTree = "<group>"; };
 		5CB0D3221838252F006230DA /* UpdateCrisisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateCrisisViewController.m; sourceTree = "<group>"; };
 		5CB0D3231838252F006230DA /* UpdateCrisisViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdateCrisisViewController.xib; sourceTree = "<group>"; };
@@ -119,6 +94,9 @@
 		5CC5DD781837F0E4009B768D /* ReportCrisisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportCrisisViewController.h; sourceTree = "<group>"; };
 		5CC5DD791837F0E4009B768D /* ReportCrisisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportCrisisViewController.m; sourceTree = "<group>"; };
 		5CC5DD7C1837F12D009B768D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7EF242542ADC677F3827EA29 /* Pods-Concrn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Concrn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Concrn/Pods-Concrn.debug.xcconfig"; sourceTree = "<group>"; };
+		B363A69130E0188A6200C7D1 /* Pods-Concrn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Concrn.release.xcconfig"; path = "Pods/Target Support Files/Pods-Concrn/Pods-Concrn.release.xcconfig"; sourceTree = "<group>"; };
+		F17BBFE619E3BDDB0032B055 /* libPods-Concrn-AFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Concrn-AFNetworking.a"; path = "Pods/build/Debug-iphoneos/libPods-Concrn-AFNetworking.a"; sourceTree = "<group>"; };
 		F1FA3141185BEC11001D296E /* concrn_logo_small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "concrn_logo_small@2x.png"; sourceTree = "<group>"; };
 		F1FA3142185BEC11001D296E /* concrn_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "concrn_logo@2x.png"; sourceTree = "<group>"; };
 		F1FA3145185BEEE6001D296E /* button_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_background@2x.png"; sourceTree = "<group>"; };
@@ -129,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17BBFE719E3BDDB0032B055 /* libPods-Concrn-AFNetworking.a in Frameworks */,
 				5C9967BD183969F300D5CDDE /* AddressBookUI.framework in Frameworks */,
 				5C99679A18385B5100D5CDDE /* libQuickDialog.a in Frameworks */,
 				5CB0D2F21837FC44006230DA /* CoreLocation.framework in Frameworks */,
@@ -136,6 +115,7 @@
 				5CC5DD4B1837EE74009B768D /* CoreGraphics.framework in Frameworks */,
 				5CC5DD4D1837EE74009B768D /* UIKit.framework in Frameworks */,
 				5CC5DD491837EE74009B768D /* Foundation.framework in Frameworks */,
+				2844ED41AB1099C46DAA29C8 /* libPods-Concrn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,37 +142,10 @@
 		5CB0D2F618380B79006230DA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				5CB0D2FB18381AE4006230DA /* AFNetworking */,
 				5CB0D2F718380B92006230DA /* HTTPClient.h */,
 				5CB0D2F818380B92006230DA /* HTTPClient.m */,
 			);
 			path = Domain;
-			sourceTree = "<group>";
-		};
-		5CB0D2FB18381AE4006230DA /* AFNetworking */ = {
-			isa = PBXGroup;
-			children = (
-				5CB0D2FC18381AE4006230DA /* AFHTTPRequestOperation.h */,
-				5CB0D2FD18381AE4006230DA /* AFHTTPRequestOperation.m */,
-				5CB0D2FE18381AE4006230DA /* AFHTTPRequestOperationManager.h */,
-				5CB0D2FF18381AE4006230DA /* AFHTTPRequestOperationManager.m */,
-				5CB0D30018381AE4006230DA /* AFHTTPSessionManager.h */,
-				5CB0D30118381AE4006230DA /* AFHTTPSessionManager.m */,
-				5CB0D30218381AE4006230DA /* AFNetworking.h */,
-				5CB0D30318381AE4006230DA /* AFNetworkReachabilityManager.h */,
-				5CB0D30418381AE4006230DA /* AFNetworkReachabilityManager.m */,
-				5CB0D30518381AE4006230DA /* AFSecurityPolicy.h */,
-				5CB0D30618381AE4006230DA /* AFSecurityPolicy.m */,
-				5CB0D30718381AE4006230DA /* AFURLConnectionOperation.h */,
-				5CB0D30818381AE4006230DA /* AFURLConnectionOperation.m */,
-				5CB0D30918381AE4006230DA /* AFURLRequestSerialization.h */,
-				5CB0D30A18381AE4006230DA /* AFURLRequestSerialization.m */,
-				5CB0D30B18381AE4006230DA /* AFURLResponseSerialization.h */,
-				5CB0D30C18381AE4006230DA /* AFURLResponseSerialization.m */,
-				5CB0D30D18381AE4006230DA /* AFURLSessionManager.h */,
-				5CB0D30E18381AE4006230DA /* AFURLSessionManager.m */,
-			);
-			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 		5CB0D32F183830BE006230DA /* Resources */ = {
@@ -216,6 +169,7 @@
 				5CB0D32F183830BE006230DA /* Resources */,
 				5CC5DD4E1837EE74009B768D /* StreetMom */,
 				5C99678C18385AEC00D5CDDE /* Vendor */,
+				840F4A22138A788D15A28F7B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,6 +184,7 @@
 		5CC5DD471837EE74009B768D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F17BBFE619E3BDDB0032B055 /* libPods-Concrn-AFNetworking.a */,
 				5C9967BC183969F300D5CDDE /* AddressBookUI.framework */,
 				5CC5DD4A1837EE74009B768D /* CoreGraphics.framework */,
 				5CB0D2F11837FC44006230DA /* CoreLocation.framework */,
@@ -237,6 +192,7 @@
 				5CC5DD7C1837F12D009B768D /* MapKit.framework */,
 				5CC5DD4C1837EE74009B768D /* UIKit.framework */,
 				5CC5DD611837EE75009B768D /* XCTest.framework */,
+				4EC7DDA2AC545625DCC8F930 /* libPods-Concrn.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -283,6 +239,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		840F4A22138A788D15A28F7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7EF242542ADC677F3827EA29 /* Pods-Concrn.debug.xcconfig */,
+				B363A69130E0188A6200C7D1 /* Pods-Concrn.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -290,9 +255,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CC5DD711837EE75009B768D /* Build configuration list for PBXNativeTarget "Concrn" */;
 			buildPhases = (
+				E5873FA850D29F17ECB13F50 /* Check Pods Manifest.lock */,
 				5CC5DD411837EE74009B768D /* Sources */,
 				5CC5DD421837EE74009B768D /* Frameworks */,
 				5CC5DD431837EE74009B768D /* Resources */,
+				583CDBB5AB79D91A1AEF25AC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -379,25 +346,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		583CDBB5AB79D91A1AEF25AC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Concrn/Pods-Concrn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5873FA850D29F17ECB13F50 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5CC5DD411837EE74009B768D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5CC5DD591837EE74009B768D /* AppDelegate.m in Sources */,
-				5CB0D31718381AE4006230DA /* AFSecurityPolicy.m in Sources */,
 				5CC5DD7A1837F0E4009B768D /* ReportCrisisViewController.m in Sources */,
 				5CB0D3241838252F006230DA /* UpdateCrisisViewController.m in Sources */,
-				5CB0D31118381AE4006230DA /* AFHTTPRequestOperationManager.m in Sources */,
 				5CB0D32B18382F44006230DA /* UserInfoViewController.m in Sources */,
-				5CB0D31918381AE4006230DA /* AFURLConnectionOperation.m in Sources */,
-				5CB0D30F18381AE4006230DA /* AFHTTPRequestOperation.m in Sources */,
 				5CB0D2F918380B92006230DA /* HTTPClient.m in Sources */,
-				5CB0D31B18381AE4006230DA /* AFURLRequestSerialization.m in Sources */,
-				5CB0D31318381AE4006230DA /* AFHTTPSessionManager.m in Sources */,
-				5CB0D31518381AE4006230DA /* AFNetworkReachabilityManager.m in Sources */,
-				5CB0D31D18381AE4006230DA /* AFURLResponseSerialization.m in Sources */,
-				5CB0D31F18381AE4006230DA /* AFURLSessionManager.m in Sources */,
 				5C99679D183865A300D5CDDE /* SurveyViewController.m in Sources */,
 				5CC5DD551837EE74009B768D /* main.m in Sources */,
 			);
@@ -503,6 +494,7 @@
 		};
 		5CC5DD721837EE75009B768D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EF242542ADC677F3827EA29 /* Pods-Concrn.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD)";
@@ -517,6 +509,10 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "StreetMom/StreetMom-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -527,6 +523,7 @@
 		};
 		5CC5DD731837EE75009B768D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B363A69130E0188A6200C7D1 /* Pods-Concrn.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD)";
@@ -541,6 +538,10 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
 				INFOPLIST_FILE = "StreetMom/StreetMom-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
