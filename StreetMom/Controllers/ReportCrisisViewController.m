@@ -5,6 +5,9 @@
 #import <QuartzCore/QuartzCore.h>
 #import <AddressBookUI/AddressBookUI.h>
 
+
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+
 @interface ReportCrisisViewController ()
 
 @property (nonatomic) CLLocationManager *locationManager;
@@ -38,7 +41,12 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     self.locationManager.pausesLocationUpdatesAutomatically = YES;
-
+    if(IS_OS_8_OR_LATER) {
+        // Use one or the other, not both. Depending on what you put in info.plist
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    
+    
     self.mapView.showsPointsOfInterest = NO;
     self.mapView.delegate = self;
 
