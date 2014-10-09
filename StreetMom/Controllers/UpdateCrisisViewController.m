@@ -38,7 +38,7 @@
     self.patientDescriptionSection.hidden = hidden;
     self.observationSection.hidden = hidden;
     
-        [self.quickDialogController.quickDialogTableView reloadData];
+    [self.quickDialogController.quickDialogTableView reloadData];
 }
 
 
@@ -258,13 +258,29 @@
     }
 
     if ([self.isPersonSwitch isOn]) {
-        params[@"gender"] = self.genderValues[[params[@"gender"] intValue]];
-        params[@"age"] = self.ageValues[[params[@"age"] intValue]];
-        params[@"race"] = self.raceValues[[params[@"race"] intValue]];
-        params[@"setting"] = self.settingValues[[params[@"setting"] intValue]];
-        params[@"observations"] = [self.observationSection.selectedItems componentsJoinedByString:@", "];
+        
+        //nil checks if user has input data for specific QElement
+        if([params objectForKey:@"gender"] != nil){
+            params[@"gender"] = self.genderValues[[params[@"gender"] intValue]];
+        }
+        
+        if([params objectForKey:@"age"] != nil){
+            params[@"age"] = self.ageValues[[params[@"age"] intValue]];
+        }
+
+        if([params objectForKey:@"race"] != nil){
+            params[@"race"] = self.raceValues[[params[@"race"] intValue]];
+        }
+
+        if([params objectForKey:@"setting"] != nil){
+            params[@"setting"] = self.settingValues[[params[@"setting"] intValue]];
+        }
+        
+        if([self.observationSection.selectedItems count] != 0){
+            params[@"observations"] = [self.observationSection.selectedItems componentsJoinedByString:@", "];
+        }
     }
-    
+ 
     if ([params count] == 0) {
         [self handleSuccessfulUpdate];
         return;
