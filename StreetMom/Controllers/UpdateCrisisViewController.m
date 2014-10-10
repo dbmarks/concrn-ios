@@ -277,7 +277,7 @@
         }
         
         if([self.observationSection.selectedItems count] != 0){
-            params[@"observations"] = [self.observationSection.selectedItems componentsJoinedByString:@", "];
+            params[@"observations"] = @[[self.observationSection.selectedItems componentsJoinedByString:@", "]];
         }
     }
  
