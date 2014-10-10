@@ -62,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		4EC7DDA2AC545625DCC8F930 /* libPods-Concrn.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Concrn.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AC4B1A419E77B420013AE84 /* SMConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMConstants.h; sourceTree = "<group>"; };
 		5C99678F18385B1F00D5CDDE /* QuickDialog.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QuickDialog.xcodeproj; path = Vendor/QuickDialog/QuickDialog.xcodeproj; sourceTree = "<group>"; };
 		5C99679B183865A300D5CDDE /* SurveyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SurveyViewController.h; sourceTree = "<group>"; };
 		5C99679C183865A300D5CDDE /* SurveyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SurveyViewController.m; sourceTree = "<group>"; };
@@ -200,6 +201,7 @@
 		5CC5DD4E1837EE74009B768D /* StreetMom */ = {
 			isa = PBXGroup;
 			children = (
+				5AC4B1A419E77B420013AE84 /* SMConstants.h */,
 				5CC5DD571837EE74009B768D /* AppDelegate.h */,
 				5CC5DD581837EE74009B768D /* AppDelegate.m */,
 				5CC5DD771837F094009B768D /* Controllers */,

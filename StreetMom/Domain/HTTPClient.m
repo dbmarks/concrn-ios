@@ -1,6 +1,9 @@
 #import "HTTPClient.h"
 #import <AFNetworking/AFNetworking.h>
 #import "UserInfoViewController.h"
+#import "SMConstants.h"
+
+
 
 @interface HTTPClient ()
 
@@ -13,7 +16,9 @@
 - (id)init {
     self = [super init];
     if (self) {
-        self.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:@"http://staging.concrn.com"]];
+        
+        //Production
+        self.manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:[NSURL URLWithString:SERVER_URL]];
         self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
         self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
     }
