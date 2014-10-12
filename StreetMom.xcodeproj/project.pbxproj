@@ -283,7 +283,7 @@
 				ORGANIZATIONNAME = quavmo;
 				TargetAttributes = {
 					5CC5DD441837EE74009B768D = {
-						DevelopmentTeam = U7B9P7LVE8;
+						DevelopmentTeam = 7SUJTL2VXM;
 					};
 				};
 			};
@@ -516,7 +516,7 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Concrn;
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Vendor/QuickDialog\"/**";
 				WRAPPER_EXTENSION = app;
@@ -545,7 +545,7 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Concrn;
 				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Vendor/QuickDialog\"/**";
 				WRAPPER_EXTENSION = app;
