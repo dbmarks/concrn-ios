@@ -98,7 +98,7 @@
     self.observationValues = @[@"At risk of harm", @"Under the influence", @"Anxious", @"Depressed", @"Aggravated", @"Threatening"];
 
     _observationSection = [[QSelectSection alloc] init];
-    _observationSection.title = @"Incident Observations: The person is...";
+    _observationSection.title = @"The person is...";
     _observationSection.multipleAllowed = YES;
     _observationSection.items = self.observationValues;
     _observationSection.hidden = YES;
@@ -124,7 +124,7 @@
     self.rootElement = [[QRootElement alloc] init];
  
     
-    QSection *additionalDescriptionSection = [[QSection alloc] initWithTitle:@"Report Information"];
+    QSection *additionalDescriptionSection = [[QSection alloc] initWithTitle:@" "];
 
     QSection *incidentDetailsSection = [[QSection alloc] initWithTitle:@"Report Information"];
 
