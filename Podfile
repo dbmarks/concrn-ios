@@ -1,10 +1,11 @@
-# Uncomment this line to define a global platform for your project
-# platform :ios, "6.0"
-
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+
+# Uncomment this line to define a global platform for your project
+platform :ios, "8.0"
 
 target "Concrn" do
   pod "AFNetworking"
+  pod "QuickDialog"
+  pod "TPKeyboardAvoiding"
 end
 
