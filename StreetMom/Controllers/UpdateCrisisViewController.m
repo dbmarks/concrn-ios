@@ -287,7 +287,7 @@
     }
     
 
-    if (params[@"urgency"] == @5) {
+    if ([params[@"urgency"] isEqual: @5]) {
         [[[UIAlertView alloc] initWithTitle:@"Warning"
                                     message:@"if you are witnessing or experiencing violence or a medical emergency do not hesitate to dial 911. "
                                    delegate:nil

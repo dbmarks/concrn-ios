@@ -76,7 +76,7 @@
         UserInfoViewController *userInfoViewController = [[UserInfoViewController alloc] init];
         [self presentViewController:userInfoViewController animated:NO completion:nil];
     } else {
-        NSString *phoneNumber = [[NSUserDefaults standardUserDefaults] valueForKey:UserPhoneNumberKey];
+        // NSString *phoneNumber = [[NSUserDefaults standardUserDefaults] valueForKey:UserPhoneNumberKey];
 
         [self.locationManager startUpdatingLocation];
     }

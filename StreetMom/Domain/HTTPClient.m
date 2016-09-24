@@ -90,13 +90,13 @@
                        onSuccess:(SuccessBlock)success
                          failure:(FailureBlock)failure {
     NSString *path;
-    NSMutableDictionary *postParams = @{@"report": params};
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postParams
-                                                       options:NSJSONWritingPrettyPrinted
-                                                         error:&error];
-    NSString* json = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    
+    NSMutableDictionary *postParams = [NSMutableDictionary dictionaryWithDictionary: @{@"report": params}];
+//    NSError *error;
+//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:postParams
+//                                                       options:NSJSONWritingPrettyPrinted
+//                                                         error:&error];
+//    NSString* json = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+
     if (image) {
         path = [NSString stringWithFormat:@"/reports/%ld/upload", (long)reportID];
 
