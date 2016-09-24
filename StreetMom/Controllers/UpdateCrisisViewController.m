@@ -111,7 +111,8 @@
     if ([self isDefaultAgency]) {
         self.navigationItem.title = @"Create Report";
     } else {
-        self.navigationItem.title = [NSString stringWithFormat:@"Report To: %@", self.agencyData[@"name"]];
+        // self.navigationItem.title = [NSString stringWithFormat:@"Report To: %@", self.agencyData[@"name"]];
+        self.navigationItem.title = @"Create Report";
     }
     
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:277/255.0 green:107/255.0 blue:110/255.0 alpha:1];
@@ -228,8 +229,8 @@
     if ([self isDefaultAgency]) {
        message = @"Thank you for reporting your concrn. Each report pulls Concrn closer to active service in your community. Tell your friends!";
     } else {
-        message  = [NSString stringWithFormat:@"Thank you for reporting your concrn. %@ will respond as soon as possible.", self.agencyData[@"name"]];
- 
+        //message  = [NSString stringWithFormat:@"Thank you for reporting your concrn. %@ will respond as soon as possible.", self.agencyData[@"name"]];
+        message  = @"Thank you for reporting your concrn. Someone will respond as soon as possible.";
     }
     
     [[[UIAlertView alloc] initWithTitle:@"Success"
