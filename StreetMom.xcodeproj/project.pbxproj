@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492814EA1D9E56D700CB5DC2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 492814E91D9E56D700CB5DC2 /* Launch Screen.storyboard */; };
 		5A6777401A36BC2D009E8A72 /* concrn-crop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A67773F1A36BC2D009E8A72 /* concrn-crop@2x.png */; };
 		5A6777431A36BDD6009E8A72 /* concrn-crop_small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A6777421A36BDD6009E8A72 /* concrn-crop_small@2x.png */; };
 		5C99679D183865A300D5CDDE /* SurveyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C99679C183865A300D5CDDE /* SurveyViewController.m */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		0C4D2478FA9DB89D5E7D5334 /* Pods-Concrn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Concrn.release.xcconfig"; path = "Pods/Target Support Files/Pods-Concrn/Pods-Concrn.release.xcconfig"; sourceTree = "<group>"; };
+		492814E91D9E56D700CB5DC2 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		5A67773F1A36BC2D009E8A72 /* concrn-crop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "concrn-crop@2x.png"; sourceTree = "<group>"; };
 		5A6777421A36BDD6009E8A72 /* concrn-crop_small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "concrn-crop_small@2x.png"; sourceTree = "<group>"; };
 		5AC4B1A419E77B420013AE84 /* SMConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMConstants.h; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				5CC5DD511837EE74009B768D /* InfoPlist.strings */,
 				5CC5DD541837EE74009B768D /* main.m */,
 				5CC5DD561837EE74009B768D /* StreetMom-Prefix.pch */,
+				492814E91D9E56D700CB5DC2 /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				5C9967C0183972A500D5CDDE /* center_location_button@2x.png in Resources */,
 				F1FA3146185BEEE6001D296E /* button_background@2x.png in Resources */,
 				5CB0D2F418380437006230DA /* ReportCrisisViewController.xib in Resources */,
+				492814EA1D9E56D700CB5DC2 /* Launch Screen.storyboard in Resources */,
 				5A6777401A36BC2D009E8A72 /* concrn-crop@2x.png in Resources */,
 				5CB0D3261838252F006230DA /* UpdateCrisisViewController.xib in Resources */,
 				5CB0D32D18382F44006230DA /* UserInfoViewController.xib in Resources */,
